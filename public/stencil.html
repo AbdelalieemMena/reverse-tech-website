@@ -1,0 +1,1026 @@
+<!doctype html>
+
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>SMT Stencil | Reverse Tech</title>
+    <link href="/favicon.png" rel="icon" type="image/png" />
+    <link href="/favicon.png" rel="apple-touch-icon" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;family=Outfit:wght@300;400;500;600;700;800&amp;family=Tajawal:wght@300;400;500;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <div class="contact-number">
+          <i class="fas fa-phone"></i
+          ><span data-ar="اتصل بنا: 01114578817" data-en="Call us: 01114578817"
+            >اتصل بنا: 01114578817</span
+          >
+        </div>
+        <div class="top-bar-actions">
+          <a class="contact-button" href="contact.html"
+            ><i class="fas fa-envelope"></i
+            ><span data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</span></a
+          ><button
+            aria-label="تغيير اللغة"
+            class="top-language-btn"
+            id="pageLanguageToggle"
+            type="button"
+          >
+            <i class="fas fa-globe"></i><span>English</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="container navbar">
+        <a class="logo" href="index.html"
+          ><img alt="Reverse Tech" src="/media/public/LogoReverseTeck-W.jpg"
+        /></a>
+        <div class="nav-content">
+          <button aria-label="فتح القائمة" class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li>
+              <a data-ar="الرئيسية" data-en="Home" href="index.html"
+                >الرئيسية</a
+              >
+            </li>
+            <li>
+              <a data-ar="من نحن" data-en="About Us" href="about.html"
+                >من نحن</a
+              >
+            </li>
+            <li>
+              <a data-ar="خدماتنا" data-en="Services" href="services.html"
+                >خدماتنا</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-cta-link active"
+                data-ar="اطلب الآن"
+                data-en="Order Now"
+                href="order.html"
+                >اطلب الآن</a
+              >
+            </li>
+            <li>
+              <a data-ar="مشاريعنا" data-en="Projects" href="projects.html"
+                >مشاريعنا</a
+              >
+            </li>
+            <li>
+              <a data-ar="عملائنا" data-en="Clients" href="clients.html"
+                >عملائنا</a
+              >
+            </li>
+            <li>
+              <a data-ar="اتصل بنا" data-en="Contact Us" href="contact.html"
+                >اتصل بنا</a
+              >
+            </li>
+            <li>
+              <a class="signin-link" href="admin.html"
+                ><i class="fas fa-user"></i>
+                <span data-ar="تسجيل الدخول" data-en="Sign In"
+                  >تسجيل الدخول</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="page-hero">
+      <h1 data-ar="طلب SMT Stencil" data-en="SMT Stencil Order">
+        طلب SMT Stencil
+      </h1>
+    </section>
+    <main class="order-page">
+      <section class="inner-page order-service-section" id="stencilOrder">
+        <div class="container">
+          <div class="order-form-card">
+            <h2 data-ar="طلب SMT Stencil" data-en="SMT Stencil Order">
+              طلب SMT Stencil
+            </h2>
+            <form id="stencilForm">
+              <div class="simple-form-grid">
+                <div class="wide">
+                  <label data-ar="ملف Gerber" data-en="Gerber File"
+                    >ملف Gerber</label
+                  >
+                  <div class="custom-file-upload" data-file-upload="">
+                    <input
+                      accept=".zip,.rar"
+                      class="custom-file-input"
+                      id="stencil_file"
+                      name="gerber_file"
+                      required=""
+                      type="file"
+                    /><label class="custom-file-label" for="stencil_file"
+                      ><i class="fas fa-cloud-arrow-up"></i
+                      ><strong
+                        data-ar="اضغط لإضافة ملف Gerber"
+                        data-en="Add Gerber File"
+                        >اضغط لإضافة ملف Gerber</strong
+                      ><span>ZIP / RAR — 100 MB max</span></label
+                    >
+                    <div
+                      class="custom-file-name"
+                      data-ar="لم يتم اختيار ملف"
+                      data-en="No file selected"
+                      data-file-name=""
+                    >
+                      لم يتم اختيار ملف
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label data-ar="المقاس" data-en="Dimensions">المقاس</label
+                  ><input
+                    name="dimensions"
+                    placeholder="300 × 400 mm"
+                    required=""
+                  />
+                </div>
+                <div>
+                  <label data-ar="السُمك" data-en="Thickness">السُمك</label
+                  ><select id="stencilThicknessSelect" name="thickness">
+                    <option value="0.1">0.10 mm</option>
+                    <option value="0.12">0.12 mm</option>
+                    <option value="0.15">0.15 mm</option>
+                    <option value="0.2">0.20 mm</option>
+                  </select>
+                </div>
+                <div>
+                  <label data-ar="الكمية" data-en="Quantity">الكمية</label
+                  ><input min="1" name="quantity" type="number" value="1" />
+                </div>
+                <div>
+                  <label data-ar="الاسم" data-en="Name">الاسم</label
+                  ><input name="customer_name" required="" />
+                </div>
+                <div>
+                  <label data-ar="الهاتف" data-en="Phone">الهاتف</label
+                  ><input name="phone" required="" />
+                </div>
+                <div>
+                  <label data-ar="البريد" data-en="Email">البريد</label
+                  ><input name="email" type="email" />
+                </div>
+              </div>
+              <section class="shipping-selector" data-shipping-section="">
+                <div class="shipping-heading">
+                  <div>
+                    <h3
+                      data-ar="طريقة الاستلام والشحن"
+                      data-en="Delivery &amp; Shipping"
+                    >
+                      طريقة الاستلام والشحن
+                    </h3>
+                    <p
+                      data-ar="اختَر طريقة استلام طلبك، وستظهر لك التكلفة والبيانات المطلوبة تلقائيًا."
+                      data-en="Choose how you would like to receive your order. Required details and fees will update automatically."
+                    >
+                      اختَر طريقة استلام طلبك، وستظهر لك التكلفة والبيانات
+                      المطلوبة تلقائيًا.
+                    </p>
+                  </div>
+                  <i class="fas fa-truck-fast"></i>
+                </div>
+                <div class="shipping-methods">
+                  <label class="shipping-method-card active">
+                    <input
+                      checked=""
+                      name="shipping_method"
+                      type="radio"
+                      value="pickup"
+                    />
+                    <span class="shipping-icon"
+                      ><i class="fas fa-building"></i
+                    ></span>
+                    <strong
+                      data-ar="استلام من مقر الشركة"
+                      data-en="Company Pickup"
+                      >استلام من مقر الشركة</strong
+                    >
+                    <small
+                      data-ar="بدون رسوم شحن — سنتواصل معك لتأكيد موعد الاستلام."
+                      data-en="No shipping fee — we will contact you to confirm the pickup time."
+                      >بدون رسوم شحن — سنتواصل معك لتأكيد موعد الاستلام.</small
+                    >
+                    <b data-ar="مجاني" data-en="Free">مجاني</b>
+                  </label>
+                  <label class="shipping-method-card">
+                    <input name="shipping_method" type="radio" value="egypt" />
+                    <span class="shipping-icon"
+                      ><i class="fas fa-map-location-dot"></i
+                    ></span>
+                    <strong
+                      data-ar="شحن داخل مصر"
+                      data-en="Delivery Inside Egypt"
+                      >شحن داخل مصر</strong
+                    >
+                    <small
+                      data-ar="يبدأ من 150 جنيه لأول كيلوجرام، ويُضاف 15 جنيهًا لكل كيلوجرام إضافي. قد تختلف التكلفة النهائية حسب المحافظة وطبيعة الشحنة، ويتم تأكيدها مع الشركة."
+                      data-en="Starts at EGP 150 for the first kilogram, plus EGP 15 for each additional kilogram. Final fees may vary by governorate and shipment type and will be confirmed by the company."
+                      >يبدأ من 150 جنيه لأول كيلوجرام، ويُضاف 15 جنيهًا لكل
+                      كيلوجرام إضافي. قد تختلف التكلفة النهائية حسب المحافظة
+                      وطبيعة الشحنة، ويتم تأكيدها مع الشركة.</small
+                    >
+                    <b data-ar="من 150 جنيه" data-en="From EGP 150"
+                      >من 150 جنيه</b
+                    >
+                  </label>
+                  <label class="shipping-method-card">
+                    <input
+                      name="shipping_method"
+                      type="radio"
+                      value="international"
+                    />
+                    <span class="shipping-icon"
+                      ><i class="fas fa-earth-americas"></i
+                    ></span>
+                    <strong
+                      data-ar="شحن خارج مصر"
+                      data-en="International Delivery"
+                      >شحن خارج مصر</strong
+                    >
+                    <small
+                      data-ar="رسوم مبدئية 5000 جنيه. تُراجع التكلفة النهائية حسب الدولة والوزن وإجراءات الشحن، ويتم تأكيد التفاصيل مع الشركة قبل التنفيذ."
+                      data-en="Initial fee: EGP 5,000. The final cost depends on destination, weight, and shipping requirements and will be confirmed before processing."
+                      >رسوم مبدئية 5000 جنيه. تُراجع التكلفة النهائية حسب الدولة
+                      والوزن وإجراءات الشحن، ويتم تأكيد التفاصيل مع الشركة قبل
+                      التنفيذ.</small
+                    >
+                    <b data-ar="من 5000 جنيه" data-en="From EGP 5,000"
+                      >من 5000 جنيه</b
+                    >
+                  </label>
+                </div>
+                <div
+                  class="shipping-details"
+                  data-shipping-details=""
+                  hidden=""
+                >
+                  <div class="shipping-fields-grid">
+                    <div
+                      class="shipping-country-field"
+                      data-country-field=""
+                      hidden=""
+                    >
+                      <label data-ar="الدولة" data-en="Country">الدولة</label>
+                      <select name="shipping_country">
+                        <option
+                          data-ar="اختر الدولة"
+                          data-en="Select country"
+                          value=""
+                        >
+                          اختر الدولة
+                        </option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="American Samoa">American Samoa</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Anguilla">Anguilla</option>
+                        <option value="Antarctica">Antarctica</option>
+                        <option value="Antigua and Barbuda">
+                          Antigua and Barbuda
+                        </option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Aruba">Aruba</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bahrain">Bahrain</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Belarus">Belarus</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Belize">Belize</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Bermuda">Bermuda</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Bolivia, Plurinational State of">
+                          Bolivia, Plurinational State of
+                        </option>
+                        <option value="Bonaire, Sint Eustatius and Saba">
+                          Bonaire, Sint Eustatius and Saba
+                        </option>
+                        <option value="Bosnia and Herzegovina">
+                          Bosnia and Herzegovina
+                        </option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Bouvet Island">Bouvet Island</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="British Indian Ocean Territory">
+                          British Indian Ocean Territory
+                        </option>
+                        <option value="Brunei Darussalam">
+                          Brunei Darussalam
+                        </option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Cabo Verde">Cabo Verde</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Cameroon">Cameroon</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Cayman Islands">Cayman Islands</option>
+                        <option value="Central African Republic">
+                          Central African Republic
+                        </option>
+                        <option value="Chad">Chad</option>
+                        <option value="Chile">Chile</option>
+                        <option value="China">China</option>
+                        <option value="Christmas Island">
+                          Christmas Island
+                        </option>
+                        <option value="Cocos (Keeling) Islands">
+                          Cocos (Keeling) Islands
+                        </option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Comoros">Comoros</option>
+                        <option value="Congo">Congo</option>
+                        <option value="Congo, The Democratic Republic of the">
+                          Congo, The Democratic Republic of the
+                        </option>
+                        <option value="Cook Islands">Cook Islands</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Curaçao">Curaçao</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Czechia">Czechia</option>
+                        <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Dominica">Dominica</option>
+                        <option value="Dominican Republic">
+                          Dominican Republic
+                        </option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Equatorial Guinea">
+                          Equatorial Guinea
+                        </option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Eswatini">Eswatini</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="Falkland Islands (Malvinas)">
+                          Falkland Islands (Malvinas)
+                        </option>
+                        <option value="Faroe Islands">Faroe Islands</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="France">France</option>
+                        <option value="French Guiana">French Guiana</option>
+                        <option value="French Polynesia">
+                          French Polynesia
+                        </option>
+                        <option value="French Southern Territories">
+                          French Southern Territories
+                        </option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Gambia">Gambia</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Gibraltar">Gibraltar</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Greenland">Greenland</option>
+                        <option value="Grenada">Grenada</option>
+                        <option value="Guadeloupe">Guadeloupe</option>
+                        <option value="Guam">Guam</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Guernsey">Guernsey</option>
+                        <option value="Guinea">Guinea</option>
+                        <option value="Guinea-Bissau">Guinea-Bissau</option>
+                        <option value="Guyana">Guyana</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="Heard Island and McDonald Islands">
+                          Heard Island and McDonald Islands
+                        </option>
+                        <option value="Holy See (Vatican City State)">
+                          Holy See (Vatican City State)
+                        </option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Hong Kong">Hong Kong</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Iran, Islamic Republic of">
+                          Iran, Islamic Republic of
+                        </option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Isle of Man">Isle of Man</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Jersey">Jersey</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Kiribati">Kiribati</option>
+                        <option value="Korea, Democratic People's Republic of">
+                          Korea, Democratic People's Republic of
+                        </option>
+                        <option value="Korea, Republic of">
+                          Korea, Republic of
+                        </option>
+                        <option value="Kuwait">Kuwait</option>
+                        <option value="Kyrgyzstan">Kyrgyzstan</option>
+                        <option value="Lao People's Democratic Republic">
+                          Lao People's Democratic Republic
+                        </option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Lebanon">Lebanon</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Liberia">Liberia</option>
+                        <option value="Libya">Libya</option>
+                        <option value="Liechtenstein">Liechtenstein</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="Macao">Macao</option>
+                        <option value="Madagascar">Madagascar</option>
+                        <option value="Malawi">Malawi</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Malta">Malta</option>
+                        <option value="Marshall Islands">
+                          Marshall Islands
+                        </option>
+                        <option value="Martinique">Martinique</option>
+                        <option value="Mauritania">Mauritania</option>
+                        <option value="Mauritius">Mauritius</option>
+                        <option value="Mayotte">Mayotte</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Micronesia, Federated States of">
+                          Micronesia, Federated States of
+                        </option>
+                        <option value="Moldova, Republic of">
+                          Moldova, Republic of
+                        </option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option>
+                        <option value="Montenegro">Montenegro</option>
+                        <option value="Montserrat">Montserrat</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Mozambique">Mozambique</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Namibia">Namibia</option>
+                        <option value="Nauru">Nauru</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="New Caledonia">New Caledonia</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Niue">Niue</option>
+                        <option value="Norfolk Island">Norfolk Island</option>
+                        <option value="North Macedonia">North Macedonia</option>
+                        <option value="Northern Mariana Islands">
+                          Northern Mariana Islands
+                        </option>
+                        <option value="Norway">Norway</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Palau">Palau</option>
+                        <option value="Palestine, State of">
+                          Palestine, State of
+                        </option>
+                        <option value="Panama">Panama</option>
+                        <option value="Papua New Guinea">
+                          Papua New Guinea
+                        </option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Pitcairn">Pitcairn</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Puerto Rico">Puerto Rico</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Russian Federation">
+                          Russian Federation
+                        </option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Réunion">Réunion</option>
+                        <option value="Saint Barthélemy">
+                          Saint Barthélemy
+                        </option>
+                        <option
+                          value="Saint Helena, Ascension and Tristan da Cunha"
+                        >
+                          Saint Helena, Ascension and Tristan da Cunha
+                        </option>
+                        <option value="Saint Kitts and Nevis">
+                          Saint Kitts and Nevis
+                        </option>
+                        <option value="Saint Lucia">Saint Lucia</option>
+                        <option value="Saint Martin (French part)">
+                          Saint Martin (French part)
+                        </option>
+                        <option value="Saint Pierre and Miquelon">
+                          Saint Pierre and Miquelon
+                        </option>
+                        <option value="Saint Vincent and the Grenadines">
+                          Saint Vincent and the Grenadines
+                        </option>
+                        <option value="Samoa">Samoa</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Sao Tome and Principe">
+                          Sao Tome and Principe
+                        </option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="Serbia">Serbia</option>
+                        <option value="Seychelles">Seychelles</option>
+                        <option value="Sierra Leone">Sierra Leone</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Sint Maarten (Dutch part)">
+                          Sint Maarten (Dutch part)
+                        </option>
+                        <option value="Slovakia">Slovakia</option>
+                        <option value="Slovenia">Slovenia</option>
+                        <option value="Solomon Islands">Solomon Islands</option>
+                        <option value="Somalia">Somalia</option>
+                        <option value="South Africa">South Africa</option>
+                        <option
+                          value="South Georgia and the South Sandwich Islands"
+                        >
+                          South Georgia and the South Sandwich Islands
+                        </option>
+                        <option value="South Sudan">South Sudan</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Suriname">Suriname</option>
+                        <option value="Svalbard and Jan Mayen">
+                          Svalbard and Jan Mayen
+                        </option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Syrian Arab Republic">
+                          Syrian Arab Republic
+                        </option>
+                        <option value="Taiwan, Province of China">
+                          Taiwan, Province of China
+                        </option>
+                        <option value="Tajikistan">Tajikistan</option>
+                        <option value="Tanzania, United Republic of">
+                          Tanzania, United Republic of
+                        </option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Timor-Leste">Timor-Leste</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Tokelau">Tokelau</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="Trinidad and Tobago">
+                          Trinidad and Tobago
+                        </option>
+                        <option value="Tunisia">Tunisia</option>
+                        <option value="Turkmenistan">Turkmenistan</option>
+                        <option value="Turks and Caicos Islands">
+                          Turks and Caicos Islands
+                        </option>
+                        <option value="Tuvalu">Tuvalu</option>
+                        <option value="Türkiye">Türkiye</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="United Arab Emirates">
+                          United Arab Emirates
+                        </option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="United States Minor Outlying Islands">
+                          United States Minor Outlying Islands
+                        </option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Uzbekistan">Uzbekistan</option>
+                        <option value="Vanuatu">Vanuatu</option>
+                        <option value="Venezuela, Bolivarian Republic of">
+                          Venezuela, Bolivarian Republic of
+                        </option>
+                        <option value="Viet Nam">Viet Nam</option>
+                        <option value="Virgin Islands, British">
+                          Virgin Islands, British
+                        </option>
+                        <option value="Virgin Islands, U.S.">
+                          Virgin Islands, U.S.
+                        </option>
+                        <option value="Wallis and Futuna">
+                          Wallis and Futuna
+                        </option>
+                        <option value="Western Sahara">Western Sahara</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                        <option value="Åland Islands">Åland Islands</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label
+                        data-ar="العنوان بالتفصيل"
+                        data-en="Full Delivery Address"
+                        >العنوان بالتفصيل</label
+                      >
+                      <textarea
+                        data-ar-placeholder="المحافظة، المدينة، الشارع، رقم المبنى، وأقرب علامة مميزة"
+                        data-en-placeholder="Country/governorate, city, street, building number, and nearest landmark"
+                        name="shipping_address"
+                        placeholder="المحافظة، المدينة، الشارع، رقم المبنى، وأقرب علامة مميزة"
+                        rows="3"
+                      ></textarea>
+                    </div>
+                    <div>
+                      <label
+                        data-ar="الوزن التقريبي (كجم)"
+                        data-en="Estimated Weight (kg)"
+                        >الوزن التقريبي (كجم)</label
+                      >
+                      <input
+                        min="0.1"
+                        name="shipping_weight_kg"
+                        step="0.1"
+                        type="number"
+                        value="1"
+                      />
+                      <small
+                        data-ar="الوزن تقديري، وسيتم تأكيد الوزن النهائي بعد مراجعة الطلب."
+                        data-en="This is an estimate; final weight will be confirmed after review."
+                        >الوزن تقديري، وسيتم تأكيد الوزن النهائي بعد مراجعة
+                        الطلب.</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="shipping-summary">
+                  <span
+                    ><i class="fas fa-receipt"></i>
+                    <span
+                      data-ar="رسوم الشحن التقديرية"
+                      data-en="Estimated shipping fee"
+                      >رسوم الشحن التقديرية</span
+                    ></span
+                  >
+                  <strong data-ar="مجاني" data-en="Free" data-shipping-fee=""
+                    >مجاني</strong
+                  >
+                </div>
+              </section>
+              <button
+                class="service-calc-btn"
+                id="stencilCalcBtn"
+                type="button"
+              >
+                <i class="fas fa-calculator"></i>
+                <span data-ar="احسب السعر" data-en="Calculate Price"
+                  >احسب السعر</span
+                >
+              </button>
+              <div class="service-quote-box" hidden="" id="stencilQuoteBox">
+                <div class="service-quote-row">
+                  <span data-ar="السعر قبل الخصم" data-en="Subtotal"
+                    >السعر قبل الخصم</span
+                  ><span id="stencilSubtotal">0</span>
+                </div>
+                <div class="service-quote-row">
+                  <span data-ar="الخصم" data-en="Discount">الخصم</span
+                  ><span id="stencilDiscount">0</span>
+                </div>
+                <div class="service-quote-row service-quote-final">
+                  <span data-ar="السعر النهائي" data-en="Final Price"
+                    >السعر النهائي</span
+                  ><span id="stencilFinal">0</span>
+                </div>
+              </div>
+              <button
+                class="pcb-submit-btn"
+                data-ar="إرسال طلب الاستنسل"
+                data-en="Submit Stencil Order"
+              >
+                إرسال طلب الاستنسل
+              </button>
+              <div class="form-message" id="stencilMsg"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <img alt="Reverse Tech Logo" src="/media/public/LogoReverseTeck-W2.png" />
+            </div>
+            <p
+              data-ar="تُعد شركة ريفرس تك مصدرًا شاملًا لاحتياجات شركات الأجهزة الطبية والمستشفيات، وتتخصص في تصميم وتصنيع وصيانة المكونات الإلكترونية والبلاستيكية والمعدنية."
+              data-en="Reverse Tech provides integrated solutions for medical-equipment companies and hospitals, specializing in the design, manufacturing, and maintenance of electronic, plastic, and metal components."
+            >
+              تُعد شركة ريفرس تك مصدرًا شاملًا لاحتياجات شركات الأجهزة الطبية
+              والمستشفيات، وتتخصص في تصميم وتصنيع وصيانة المكونات الإلكترونية
+              والبلاستيكية والمعدنية.
+            </p>
+            <div class="social-icons">
+              <a
+                aria-label="Facebook"
+                href="https://www.facebook.com/Reversetechmed"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook-f"></i></a
+              ><a aria-label="Twitter" href="#"
+                ><i class="fab fa-twitter"></i></a
+              ><a
+                aria-label="Instagram"
+                href="https://www.instagram.com/reverse.tech2024/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i></a
+              ><a
+                aria-label="LinkedIn"
+                href="https://www.linkedin.com/company/reverse-tech-med/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+            <ul>
+              <li>
+                <a data-ar="الرئيسية" data-en="Home" href="index.html"
+                  >الرئيسية</a
+                >
+              </li>
+              <li>
+                <a data-ar="من نحن" data-en="About Us" href="about.html"
+                  >من نحن</a
+                >
+              </li>
+              <li>
+                <a data-ar="خدماتنا" data-en="Services" href="services.html"
+                  >خدماتنا</a
+                >
+              </li>
+              <li>
+                <a data-ar="اطلب الآن" data-en="Order Now" href="order.html"
+                  >اطلب الآن</a
+                >
+              </li>
+              <li>
+                <a data-ar="عملائنا" data-en="Clients" href="clients.html"
+                  >عملائنا</a
+                >
+              </li>
+              <li>
+                <a data-ar="مشاريعنا" data-en="Projects" href="projects.html"
+                  >مشاريعنا</a
+                >
+              </li>
+              <li>
+                <a data-ar="اتصل بنا" data-en="Contact Us" href="contact.html"
+                  >اتصل بنا</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h4>
+            <ul>
+              <li>
+                <a
+                  data-ar="تصميم وتصنيع وتجميع اللوحات الإلكترونية (PCB)"
+                  data-en="PCB Design, Manufacturing &amp; Assembly"
+                  href="pcb-manufacturing-service.html"
+                  >تصميم وتصنيع وتجميع اللوحات الإلكترونية (PCB)</a
+                >
+              </li>
+              <li>
+                <a
+                  data-ar="صيانة اللوحات الإلكترونية"
+                  data-en="PCB Maintenance"
+                  href="pcb-maintenance-service.html"
+                  >صيانة اللوحات الإلكترونية</a
+                >
+              </li>
+              <li>
+                <a
+                  data-ar="خدمات التشغيل بالـ CNC"
+                  data-en="CNC Machining"
+                  href="cnc-service.html"
+                  >خدمات التشغيل بالـ CNC</a
+                >
+              </li>
+              <li>
+                <a
+                  data-ar="المسح والتصميم والطباعة ثلاثية الأبعاد"
+                  data-en="3D Scanning, Design &amp; Printing"
+                  href="3d-printing-service.html"
+                  >المسح والتصميم والطباعة ثلاثية الأبعاد</a
+                >
+              </li>
+              <li>
+                <a
+                  data-ar="الهندسة العكسية للأجهزة الطبية"
+                  data-en="Medical Device Reverse Engineering"
+                  href="reverse-engineering-service.html"
+                  >الهندسة العكسية للأجهزة الطبية</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-subscribe">
+            <h4 data-ar="اشترك في النشرة البريدية" data-en="Newsletter">
+              اشترك في النشرة البريدية
+            </h4>
+            <p
+              data-ar="اشترك لتصلك آخر أخبارنا وعروضنا"
+              data-en="Subscribe for our latest news and offers"
+            >
+              اشترك لتصلك آخر أخبارنا وعروضنا
+            </p>
+            <form class="subscribe-form">
+              <input
+                data-ar="بريدك الإلكتروني"
+                data-en="Your email"
+                placeholder="بريدك الإلكتروني"
+                required="True"
+                type="email"
+              /><button type="submit">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="copyright">
+          <p
+            data-ar="© 2026 Reverse Tech. جميع الحقوق محفوظة"
+            data-en="© 2026 Reverse Tech. All rights reserved"
+          >
+            © 2026 Reverse Tech. جميع الحقوق محفوظة
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function fileUploadInit() {
+        document.querySelectorAll("[data-file-upload]").forEach((box) => {
+          const input = box.querySelector("input[type=file]"),
+            name = box.querySelector("[data-file-name]");
+          if (!input || input.dataset.bound) return;
+          input.dataset.bound = "1";
+          input.addEventListener("change", () => {
+            const en = document.documentElement.lang === "en";
+            name.textContent = input.files[0]
+              ? input.files[0].name
+              : en
+                ? "No file selected"
+                : "لم يتم اختيار ملف";
+            box.classList.toggle("has-file", !!input.files[0]);
+          });
+        });
+      }
+      fileUploadInit();
+      async function submitForm(form, url, msgId) {
+        const msg = document.getElementById(msgId),
+          fd = new FormData(form),
+          waText = [
+            "طلب SMT Stencil جديد من موقع Reverse Tech",
+            ...Array.from(fd.entries())
+              .filter(([k, v]) => typeof v === "string" && v.trim())
+              .map(([k, v]) => `${k}: ${v}`),
+          ].join("\n"),
+          waUrl = `https://wa.me/201114578817?text=${encodeURIComponent(waText)}`,
+          wa = window.open(waUrl, "_blank", "noopener");
+        try {
+          const r = await fetch(url, {
+            method: "POST",
+            body: new FormData(form),
+          });
+          const text = await r.text();
+          let d = {};
+          try {
+            d = text ? JSON.parse(text) : {};
+          } catch (_) {
+            throw Error("استجابة غير صحيحة من الخادم");
+          }
+          if (!r.ok) throw Error(d.error || "Request failed");
+          msg.className = "form-message show success";
+          msg.textContent =
+            document.documentElement.lang === "en"
+              ? "Order submitted successfully"
+              : "تم إرسال الطلب بنجاح وتم إرسال الإشعارات";
+          if (!wa) window.open(waUrl, "_blank", "noopener");
+          form.reset();
+          fileUploadInit();
+        } catch (e) {
+          if (wa && !wa.closed) wa.close();
+          msg.className = "form-message show error";
+          msg.textContent = e.message;
+        }
+      }
+    </script>
+    <script>
+      const stencilForm = document.getElementById("stencilForm");
+      async function loadStencilOptions() {
+        try {
+          const r = await fetch("/api/service-pricing/stencil");
+          if (!r.ok) return;
+          const cfg = await r.json();
+          const el = document.getElementById("stencilThicknessSelect");
+          if (el) {
+            const current = el.value;
+            const keys = Object.keys(cfg.thicknessMultiplier || {});
+            if (keys.length) {
+              el.innerHTML = keys
+                .map((k) => `<option value="${k}">${k} mm</option>`)
+                .join("");
+            }
+            if (keys.includes(current)) el.value = current;
+          }
+        } catch (e) {
+          console.warn("Stencil pricing options fallback used", e);
+        }
+      }
+      loadStencilOptions();
+
+      async function calculateStencil() {
+        const fd = new FormData(stencilForm);
+        const body = {
+          dimensions: fd.get("dimensions"),
+          thickness: fd.get("thickness"),
+          quantity: Number(fd.get("quantity") || 1),
+          shipping_method: fd.get("shipping_method"),
+          shipping_country: fd.get("shipping_country"),
+          shipping_address: fd.get("shipping_address"),
+          shipping_weight_kg: Number(fd.get("shipping_weight_kg") || 1),
+        };
+        const r = await fetch("/api/stencil-quote", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        });
+        const q = await r.json();
+        if (!r.ok) throw Error(q.error || "تعذر حساب السعر");
+        document.getElementById("stencilQuoteBox").hidden = false;
+        document.getElementById("stencilSubtotal").textContent =
+          q.subtotal.toLocaleString() + " جنيه";
+        document.getElementById("stencilDiscount").textContent =
+          q.discountValue.toLocaleString() +
+          " جنيه (" +
+          q.discountPercent +
+          "%)";
+        document.getElementById("stencilFinal").textContent =
+          q.finalPrice.toLocaleString() + " جنيه";
+        return q;
+      }
+      document
+        .getElementById("stencilCalcBtn")
+        .addEventListener("click", () =>
+          calculateStencil().catch((e) => alert(e.message)),
+        );
+      stencilForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        try {
+          await calculateStencil();
+          await submitForm(e.target, "/api/stencil-orders", "stencilMsg");
+        } catch (err) {
+          document.getElementById("stencilMsg").className =
+            "form-message show error";
+          document.getElementById("stencilMsg").textContent = err.message;
+        }
+      });
+    </script>
+    <script src="shipping.js"></script>
+    <script src="page-header.js"></script>
+    <script src="newsletter.js?v=1"></script>
+  </body>
+</html>

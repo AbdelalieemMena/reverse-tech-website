@@ -1,0 +1,9 @@
+{
+  "config": {
+    "start_date": "2026-08-01",
+    "end_date": null,
+    "closed_message_ar": "انتهت فترة التسجيل لدعم مشاريع التخرج لهذا الموسم، تابعونا لمعرفة موعد الفتح القادم 🚀",
+    "closed_message_en": "Registration for this season's graduation project support has closed. Stay tuned for the next opening 🚀"
+  },
+  "requests": []
+}

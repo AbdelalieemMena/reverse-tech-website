@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse Tech for medical equipments</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- شريط المهام العلوي -->
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <div class="contact-number">
+          <i class="fas fa-phone"></i>
+          <span>اتصل بنا: 01114578817</span>
+        </div>
+        <button class="contact-button">
+          <i class="fas fa-envelope"></i>
+          اتصل بنا
+        </button>
+      </div>
+    </div>
+
+    <!-- شريط التنقل -->
+    <header>
+      <div class="container navbar">
+        <div class="logo">
+          <img
+            src="../../media/public/LogoReverseTeck-W.jpg"
+            alt="Reverse Tech Logo"
+          />
+        </div>
+
+        <div class="nav-content">
+          <div class="language-switcher">
+            <button class="lang-btn" id="languageToggle">
+              <i class="fas fa-globe"></i>
+              <span>English</span>
+            </button>
+          </div>
+
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <ul class="nav-links">
+            <button class="close-menu">
+              <i class="fas fa-times"></i>
+            </button>
+            <li><a href="#home" data-key="home">الرئيسية</a></li>
+            <li><a href="#about" data-key="about">من نحن</a></li>
+            <li><a href="#services" data-key="services">خدماتنا</a></li>
+            <li><a href="#clients" data-key="clients">عملائنا</a></li>
+            <li><a href="#reverse" data-key="reverse">الهندسة العكسية</a></li>
+            <li><a href="#projects" data-key="projects">مشاريعنا</a></li>
+            <li><a href="#contact" data-key="contact">اتصل بنا</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- سلايدر فيديو الخدمات -->
+    <section class="video-hero-slider" id="videoSlider">
+      <div class="video-slide active">
+        <video autoplay muted loop playsinline preload="auto">
+          <source
+            src="https://assets.mixkit.co/videos/2381/2381-720.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="video-slide-overlay"></div>
+        <div class="video-slide-caption">
+          <span class="video-slide-number">01 / 04</span>
+          <h2 data-key="servicePcbTitle">
+            تصميم وتصنيع وتجميع اللوحات الإلكترونية (PCB)
+          </h2>
+        </div>
+      </div>
+
+      <div class="video-slide">
+        <video autoplay muted loop playsinline preload="auto">
+          <source
+            src="https://videos.pexels.com/video-files/7030718/7030718-uhd_2560_1440_24fps.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="video-slide-overlay"></div>
+        <div class="video-slide-caption">
+          <span class="video-slide-number">02 / 04</span>
+          <h2 data-key="servicePcbMaintenanceTitle">
+            صيانة اللوحات الإلكترونية (PCB Maintenance)
+          </h2>
+        </div>
+      </div>
+
+      <div class="video-slide">
+        <video autoplay muted loop playsinline preload="auto">
+          <source
+            src="https://assets.mixkit.co/videos/2237/2237-720.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="video-slide-overlay"></div>
+        <div class="video-slide-caption">
+          <span class="video-slide-number">03 / 04</span>
+          <h2 data-key="serviceCncTitle">خدمات التشغيل بالـ CNC</h2>
+        </div>
+      </div>
+
+      <div class="video-slide">
+        <video autoplay muted loop playsinline preload="auto">
+          <source
+            src="https://videos.pexels.com/video-files/855255/855255-hd_1920_1080_25fps.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="video-slide-overlay"></div>
+        <div class="video-slide-caption">
+          <span class="video-slide-number">04 / 04</span>
+          <h2 data-key="service3dTitle">
+            المسح والتصميم والطباعة ثلاثية الأبعاد
+          </h2>
+        </div>
+      </div>
+
+      <div class="video-slider-dots">
+        <button class="video-dot active" data-slide="0" aria-label="1"></button>
+        <button class="video-dot" data-slide="1" aria-label="2"></button>
+        <button class="video-dot" data-slide="2" aria-label="3"></button>
+        <button class="video-dot" data-slide="3" aria-label="4"></button>
+      </div>
+    </section>
+
+    <!-- قسم البطل -->
+    <section class="hero" id="home">
+      <div class="container">
+        <h1 data-key="heroTitle">حلول تقنية متكاملة لمستقبل أفضل</h1>
+        <p data-key="heroDesc">
+          نقدم في Reverse Tech خدمات متكاملة في مجال الصيانة، المعايرة، التصنيع
+          والطباعة ثلاثية الأبعاد بأعلى معايير الجودة
+        </p>
+        <button
+          type="button"
+          class="cta-button request-service-btn"
+          data-key="ctaButton"
+        >
+          اطلب خدمة
+        </button>
+      </div>
+    </section>
+
+    <!-- قسم من نحن -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-container">
+          <div class="about-image">
+            <img src="../../media/public/us.jpg" alt="من نحن" />
+          </div>
+          <div class="about-content">
+            <h2 data-key="aboutTitle">من نحن</h2>
+            <p data-key="aboutDesc">
+              شركة Reverse Tech متخصصة في تقديم خدمات الهندسة العكسية للأجهزة
+              الطبية. نعمل على تحليل وفحص مكونات وأداء الأجهزة بدقة عالية
+              باستخدام أحدث أدوات القياس والمسح ثلاثي الأبعاد. نقدم خدماتنا إلى
+              المستشفيات والمؤسسات الطبية، ونساعد المصنعين على الالتزام
+              بالمعايير الدولية، ونساهم في تحسين الأداء، ونوفر دعمًا فنيًا
+              متكاملاً عند صعوبة الحصول على قطع الغيار الأصيلة مع مراعاة حقوق
+              الملكية الفكرية.
+            </p>
+
+            <div class="about-features">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-industry"></i>
+                </div>
+                <div class="feature-text">
+                  <h4 data-key="feature1Title">دعم الصناعة الوطنية</h4>
+                  <p data-key="feature1Desc">نساهم في تنمية الصناعة المحلية</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="feature-text">
+                  <h4 data-key="feature2Title">تطوير الأداء</h4>
+                  <p data-key="feature2Desc">نعمل على تحسين أداء الأجهزة</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-cogs"></i>
+                </div>
+                <div class="feature-text">
+                  <h4 data-key="feature3Title">إصلاح المكونات</h4>
+                  <p data-key="feature3Desc">نقوم بإصلاح المكونات المعطلة</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-handshake"></i>
+                </div>
+                <div class="feature-text">
+                  <h4 data-key="feature4Title">شراكات مستدامة</h4>
+                  <p data-key="feature4Desc">
+                    نبني علاقات طويلة الأمد مع عملائنا
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-key="servicesTitle">خدماتنا</h2>
+          <p data-key="servicesDesc">
+            نقدم مجموعة متكاملة من الخدمات التقنية لتلبية احتياجاتك
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card animate delay-1">
+            <img
+              src="../../media/public/pcb-design-manufacturing.png"
+              alt="PCB Design, Manufacturing & Assembly"
+              class="service-image"
+            />
+            <div class="service-content">
+              <h3 data-key="servicePcbTitle">
+                تصميم وتصنيع وتجميع اللوحات الإلكترونية (PCB)
+              </h3>
+              <p data-key="servicePcbDesc">
+                نقدم خدمة متكاملة تشمل تصميم اللوحات الإلكترونية PCB وتصنيعها
+                وتجميع مكوناتها Assembly بأعلى معايير الجودة والدقة، بداية من
+                الفكرة الأولى وحتى المنتج النهائي الجاهز للتشغيل.
+              </p>
+              <a href="#" class="read-more" data-key="readMore"
+                >اعرف أكثر <i class="fas fa-arrow-left"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="service-card animate delay-2">
+            <img
+              src="../../media/public/pcb-maintenance.png"
+              alt="PCB Maintenance"
+              class="service-image"
+            />
+            <div class="service-content">
+              <h3 data-key="servicePcbMaintenanceTitle">
+                صيانة اللوحات الإلكترونية (PCB Maintenance)
+              </h3>
+              <p data-key="servicePcbMaintenanceDesc">
+                نقدم خدمة فحص وصيانة اللوحات الإلكترونية المعطلة وتشخيص الأعطال
+                وإصلاح نقاط الضعف فيها، لإطالة عمر الجهاز وتقليل تكلفة استبدال
+                القطع الأصلية.
+              </p>
+              <a href="#" class="read-more" data-key="readMore"
+                >اعرف أكثر <i class="fas fa-arrow-left"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="service-card animate delay-3">
+            <img
+              src="../../media/public/cnc-machining.png"
+              alt="CNC Machining"
+              class="service-image"
+            />
+            <div class="service-content">
+              <h3 data-key="serviceCncTitle">خدمات التشغيل بالـ CNC</h3>
+              <p data-key="serviceCncDesc">
+                نقدم خدمات التصنيع الدقيق باستخدام ماكينات CNC لإنتاج القطع
+                المعدنية والبلاستيكية بمقاسات وتفاصيل دقيقة، تناسب قطع غيار
+                الأجهزة الطبية والنماذج الصناعية.
+              </p>
+              <a href="#" class="read-more" data-key="readMore"
+                >اعرف أكثر <i class="fas fa-arrow-left"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="service-card animate delay-4">
+            <img
+              src="../../media/public/3d-scanning-printing.png"
+              alt="3D Scanning, Designing & Printing"
+              class="service-image"
+            />
+            <div class="service-content">
+              <h3 data-key="service3dTitle">
+                المسح والتصميم والطباعة ثلاثية الأبعاد
+              </h3>
+              <p data-key="service3dDesc">
+                نقدم خدمة متكاملة تبدأ بالمسح الضوئي ثلاثي الأبعاد للقطعة
+                الأصلية، مرورًا بإعادة تصميمها هندسيًا بدقة، وصولًا لطباعتها
+                باستخدام أحدث تقنيات الطباعة ثلاثية الأبعاد.
+              </p>
+              <a href="#" class="read-more" data-key="readMore"
+                >اعرف أكثر <i class="fas fa-arrow-left"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الهندسة العكسية -->
+    <section class="reverse-engineering" id="reverse">
+      <div class="container">
+        <div class="reverse-container">
+          <div class="reverse-content">
+            <h2 data-key="reverseTitle">الهندسة العكسية للأجهزة الطبية</h2>
+            <p data-key="reverseDesc">
+              نحن نقدم خدمات الهندسة العكسية للأجهزة الطبية لفهم وتصميم وتطوير
+              الأجهزة بدقة عالية، من خلال فريق متخصص يمتلك خبرة قوية في تحليل
+              الأنظمة الطبية المعقدة. نعمل على تحليل وفحص مكونات وأداء الأجهزة
+              بدقة عالية باستخدام أحدث أدوات القياس والمسح ثلاثي الأبعاد.
+            </p>
+            <button class="cta-button" data-key="readMore2">اقرأ المزيد</button>
+          </div>
+          <div class="reverse-image">
+            <img src="../../media/public/solid.jpg" alt="الهندسة العكسية" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم المشاريع -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-key="projectsTitle">مشاريعنا</h2>
+          <p data-key="projectsDesc">
+            نماذج من أعمالنا ومشاريعنا المنجزة في مجال الهندسة العكسية والتصنيع
+            والطباعة ثلاثية الأبعاد
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card animate delay-1">
+            <div class="project-image">
+              <img src="../../media/public/project1.png" alt="مشروع إعادة تصنيع قطعة غيار" />
+              <div class="project-overlay">
+                <a href="project1.jpg" target="_blank" class="project-zoom"
+                  ><i class="fas fa-search-plus"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag" data-key="project1Tag"
+                >هندسة عكسية</span
+              >
+              <h3 data-key="project1Title">إعادة تصنيع قطعة غيار لجهاز أشعة</h3>
+              <p data-key="project1Desc">
+                مسح ثلاثي الأبعاد وإعادة تصميم قطعة غيار أصلية لجهاز أشعة طبي
+                غير متوفرة في السوق.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card animate delay-2">
+            <div class="project-image">
+              <img src="../../media/public/project2.png" alt="مشروع نمذجة جهاز تنفس" />
+              <div class="project-overlay">
+                <a href="project2.jpg" target="_blank" class="project-zoom"
+                  ><i class="fas fa-search-plus"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag" data-key="project2Tag"
+                >طباعة ثلاثية الأبعاد</span
+              >
+              <h3 data-key="project2Title">
+                نمذجة ثلاثية الأبعاد لمكونات جهاز تنفس
+              </h3>
+              <p data-key="project2Desc">
+                تصميم وطباعة مكونات بلاستيكية دقيقة لجهاز تنفس صناعي بمواصفات
+                مطابقة للأصل.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card animate delay-3">
+            <div class="project-image">
+              <img src="../../media/public/project3.jpg" alt="مشروع تصنيع لوحة إلكترونية" />
+              <div class="project-overlay">
+                <a href="project3.jpg" target="_blank" class="project-zoom"
+                  ><i class="fas fa-search-plus"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag" data-key="project3Tag"
+                >تصنيع إلكتروني</span
+              >
+              <h3 data-key="project3Title">
+                تصنيع لوحة إلكترونية لجهاز مراقبة القلب
+              </h3>
+              <p data-key="project3Desc">
+                تصميم وتصنيع لوحة PCB بديلة لجهاز مراقبة القلب مع فحص كامل
+                للأداء.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card animate delay-1">
+            <div class="project-image">
+              <img src="../../media/public/project4.jpg" alt="مشروع معايرة جهاز تحليل الدم" />
+              <div class="project-overlay">
+                <a href="project4.jpg" target="_blank" class="project-zoom"
+                  ><i class="fas fa-search-plus"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag" data-key="project4Tag"
+                >صيانة ومعايرة</span
+              >
+              <h3 data-key="project4Title">معايرة جهاز تحليل الدم</h3>
+              <p data-key="project4Desc">
+                صيانة ومعايرة دورية لجهاز تحليل دم بمستشفى شريك وفق المعايير
+                الدولية.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card animate delay-2">
+            <div class="project-image">
+              <img src="../../media/public/project5.jpg" alt="مشروع طباعة هيكل جهاز طبي" />
+              <div class="project-overlay">
+                <a href="project5.jpg" target="_blank" class="project-zoom"
+                  ><i class="fas fa-search-plus"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag" data-key="project5Tag"
+                >طباعة ثلاثية الأبعاد</span
+              >
+              <h3 data-key="project5Title">طباعة هيكل خارجي لجهاز طبي محمول</h3>
+              <p data-key="project5Desc">
+                إعادة تصميم وطباعة هيكل خارجي متين لجهاز طبي محمول بعد تلف
+                الهيكل الأصلي.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card animate delay-3">
+            <div class="project-image">
+              <img src="../../media/public/project6.jpg" alt="مشروع إصلاح وحدة تحكم جهاز ليزر" />
+              <div class="project-overlay">
+                <a href="project6.jpg" target="_blank" class="project-zoom"
+                  ><i class="fas fa-search-plus"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <span class="project-tag" data-key="project6Tag"
+                >هندسة عكسية</span
+              >
+              <h3 data-key="project6Title">إصلاح وحدة تحكم لجهاز ليزر طبي</h3>
+              <p data-key="project6Desc">
+                تحليل الدائرة الأصلية وإصلاح وحدة التحكم الإلكترونية لجهاز ليزر
+                طبي معطل.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم العملاء -->
+    <section class="clients-section" id="clients">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-key="clientsTitle">عملائنا</h2>
+          <p data-key="clientsDesc">
+            نفخر بشراكتنا مع أبرز المؤسسات الطبية والصناعية
+          </p>
+        </div>
+
+        <div class="clients-grid">
+          <div class="client-logo">
+            <img src="../../media/public/clientTrust.png" alt="Client 1" />
+          </div>
+          <div class="client-logo">
+            <img src="../../media/public/clint-1-Target.png" alt="Client 2" />
+          </div>
+          <div class="client-logo">
+            <img src="../../media/public/clint3-lazerHub.png" alt="Client 3" />
+          </div>
+          <div class="client-logo">
+            <img src="../../media/public/client TataLaser.png" alt="Client 4" />
+          </div>
+          <div class="client-logo">
+            <img src="../../media/public/clint-3-ontime.png" alt="Client 5" />
+          </div>
+          <div class="client-logo">
+            <img src="../../media/public/clint3-lazerHub.png" alt="Client 6" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم المعلومات -->
+    <section class="info-section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-item">
+            <i class="fas fa-tools"></i>
+            <h3 data-key="info1Title">أدوات متطورة</h3>
+            <p data-key="info1Desc">
+              نستخدم أحدث الأدوات والتقنيات لضمان جودة الخدمة
+            </p>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-users"></i>
+            <h3 data-key="info2Title">فريق خبير</h3>
+            <p data-key="info2Desc">
+              فريق من المهندسين والفنيين ذوي الخبرة الواسعة
+            </p>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-award"></i>
+            <h3 data-key="info3Title">جودة مضمونة</h3>
+            <p data-key="info3Desc">
+              نلتزم بأعلى معايير الجودة في جميع خدماتنا
+            </p>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-headset"></i>
+            <h3 data-key="info4Title">دعم فني</h3>
+            <p data-key="info4Desc">
+              خدمة عملاء على أعلى مستوى متاحة على مدار الساعة
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-key="contactTitle">اتصل بنا</h2>
+          <p data-key="contactDesc">
+            يسعدنا تواصلكم معنا لأي استفسار أو طلب خدمة
+          </p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3 data-key="addressTitle">عنواننا</h3>
+                <p data-key="address">
+                  قطعة 9367 شارع هدى شعراوى – المقطم – القاهرة – مصر
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3 data-key="phoneTitle">هاتفنا</h3>
+                <p>01114578817</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3 data-key="emailTitle">البريد الإلكتروني</h3>
+                <p>info@reversetech-med.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3 data-key="hoursTitle">ساعات العمل</h3>
+                <p data-key="hours">السبت - الخميس: 9 ص - 5 م</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3 data-key="sendMessage">أرسل رسالة</h3>
+            <form>
+              <div class="form-group">
+                <label for="name" data-key="nameLabel">الاسم</label>
+                <input type="text" id="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email" data-key="emailLabel"
+                  >البريد الإلكتروني</label
+                >
+                <input type="email" id="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message" data-key="messageLabel">الرسالة</label>
+                <textarea id="message" required></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn" data-key="sendButton">
+                إرسال
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <img
+                src="../../media/public/LogoReverseTeck-W.jpg"
+                alt="Reverse Tech Logo"
+              />
+            </div>
+            <p data-key="footerDesc">
+              تُعدّ شركة ريفيرس تك مصدرًا شاملًا لجميع إحتياجات شركات الاجهزة
+              الطبية والمستشفيات وجميع العاملين في مجال الاجهزة الطبية واجهزة
+              الليزر . نتخصص في تصميم وصناعة كل قطع غيار الاجهزة الطبية بما فيها
+              الدوائر و اللوحات الالكترونية والحساسات والشاشات وجميع القطع
+              البلاستكية والمعدنية
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h4 data-key="quickLinks">روابط سريعة</h4>
+            <ul>
+              <li><a href="#home" data-key="home">الرئيسية</a></li>
+              <li><a href="#about" data-key="about">من نحن</a></li>
+              <li><a href="#services" data-key="services">خدماتنا</a></li>
+              <li><a href="#clients" data-key="clients">عملائنا</a></li>
+              <li><a href="#projects" data-key="projects">مشاريعنا</a></li>
+              <li><a href="#contact" data-key="contact">اتصل بنا</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4 data-key="ourServices">خدماتنا</h4>
+            <ul>
+              <li>
+                <a href="#services" data-key="servicePcbTitle"
+                  >تصميم وتصنيع وتجميع اللوحات الإلكترونية (PCB)</a
+                >
+              </li>
+              <li>
+                <a href="#services" data-key="servicePcbMaintenanceTitle"
+                  >صيانة اللوحات الإلكترونية (PCB Maintenance)</a
+                >
+              </li>
+              <li>
+                <a href="#services" data-key="serviceCncTitle"
+                  >خدمات التشغيل بالـ CNC</a
+                >
+              </li>
+              <li>
+                <a href="#services" data-key="service3dTitle"
+                  >المسح والتصميم والطباعة ثلاثية الأبعاد</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-subscribe">
+            <h4 data-key="subscribeTitle">اشترك في النشرة البريدية</h4>
+            <p data-key="subscribeDesc">اشترك لتصلك آخر أخبارنا وعروضنا</p>
+            <form class="subscribe-form">
+              <input
+                type="email"
+                placeholder="بريدك الإلكتروني"
+                required
+                data-key="emailPlaceholder"
+              />
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>© 2023 Reverse Tech. جميع الحقوق محفوظة</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

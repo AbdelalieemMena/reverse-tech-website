@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse Tech for medical equipments</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary-color: #1a73e8;
+        --secondary-color: #0d47a1;
+        --accent-color: #ff5722;
+        --light-color: #f8f9fa;
+        --dark-color: #202124;
+        --gray-color: #5f6368;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f5f7fa;
+        color: var(--dark-color);
+        line-height: 1.6;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      /* شريط التنقل */
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: white;
+        padding: 15px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo img {
+        height: 50px;
+        transition: transform 0.3s ease;
+      }
+
+      .logo img:hover {
+        transform: scale(1.05);
+      }
+
+      .logo h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+        padding: 8px 5px;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent-color);
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 3px;
+        background-color: var(--accent-color);
+        transition: width 0.3s;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .language-switcher {
+        margin-right: 20px;
+      }
+
+      .lang-btn {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 8px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: white;
+      }
+
+      .lang-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+      }
+
+      /* القسم الرئيسي */
+      .main-content {
+        padding: 60px 0;
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-title h2 {
+        font-size: 2.2rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 80px;
+        height: 3px;
+        background-color: var(--accent-color);
+        transition: width 0.5s ease;
+      }
+
+      .section-title:hover h2::after {
+        width: 120px;
+      }
+
+      .section-title p {
+        color: var(--gray-color);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* البطاقات ذات التأثيرات */
+      .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        position: relative;
+      }
+
+      .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .card:hover .card-image img {
+        transform: scale(1.1);
+      }
+
+      .card-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        padding: 20px;
+        color: white;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s ease;
+      }
+
+      .card:hover .card-overlay {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .card-content {
+        padding: 20px;
+      }
+
+      .card-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+      }
+
+      .card-content p {
+        color: var(--gray-color);
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .card-list {
+        list-style: none;
+        margin-top: 15px;
+      }
+
+      .card-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .card-list li:last-child {
+        border-bottom: none;
+      }
+
+      .card-list i {
+        color: var(--accent-color);
+      }
+
+      /* التذييل */
+      footer {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+          url("https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 50px 0 20px;
+        position: relative;
+      }
+
+      footer::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        clip-path: polygon(0 100%, 100% 0, 100% 100%);
+        z-index: 1;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .footer-about {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .footer-logo img {
+        height: 50px;
+      }
+
+      .footer-links h4 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-links h4::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 40px;
+        height: 2px;
+        background-color: var(--accent-color);
+      }
+
+      .footer-links ul {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: #ddd;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent-color);
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .contact-item i {
+        color: var(--accent-color);
+        font-size: 1.2rem;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-icons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: white;
+        transition: all 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        background-color: var(--accent-color);
+        transform: translateY(-5px);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 14px;
+        color: #aaa;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* التكيف مع الشاشات الصغيرة */
+      @media (max-width: 992px) {
+        .nav-links {
+          gap: 15px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .cards-container {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .contact-item {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- شريط التنقل -->
+    <header>
+      <div class="container navbar">
+        <div class="logo">
+          <img
+            src="https://via.placeholder.com/50x50/ffffff/1a73e8?text=RT"
+            alt="Reverse Tech Logo"
+          />
+          <h1>Reverse Tech</h1>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#about">من نحن</a></li>
+          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#projects">مشاريعنا</a></li>
+          <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+
+        <div class="language-switcher">
+          <button class="lang-btn">
+            <i class="fas fa-globe"></i>
+            English
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <section class="main-content" id="home">
+      <div class="container">
+        <div class="section-title">
+          <h2>تصنيف اللوحات الإلكترونية</h2>
+          <p>
+            نقدم لكم أحدث حلول الهندسة العكسية للوحات الإلكترونية بأعلى معايير
+            الجودة
+          </p>
+        </div>
+
+        <div class="cards-container">
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1558442074-3c19857bc1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="لوحات إلكترونية"
+              />
+              <div class="card-overlay">
+                <h3>المكثفات</h3>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>المكثفات</h3>
+              <p>
+                نقدم مجموعة واسعة من المكثفات عالية الجودة للوحات الإلكترونية
+              </p>
+              <ul class="card-list">
+                <li><i class="fas fa-microchip"></i> C18</li>
+                <li><i class="fas fa-microchip"></i> C19</li>
+                <li><i class="fas fa-microchip"></i> C20</li>
+                <li><i class="fas fa-microchip"></i> C21</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="مقاومات"
+              />
+              <div class="card-overlay">
+                <h3>المقاومات</h3>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>المقاومات</h3>
+              <p>مجموعة متكاملة من المقاومات بدقة عالية وتنوع في القيم</p>
+              <ul class="card-list">
+                <li><i class="fas fa-bolt"></i> R1 - R8</li>
+                <li><i class="fas fa-bolt"></i> R9 - R16</li>
+                <li><i class="fas fa-bolt"></i> R17 - R24</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1587202372775-e229f172b9d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="دوائر متكاملة"
+              />
+              <div class="card-overlay">
+                <h3>دوائر متكاملة</h3>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>دوائر متكاملة</h3>
+              <p>أحدث الدوائر المتكاملة لتلبية احتياجات مشاريعكم الإلكترونية</p>
+              <ul class="card-list">
+                <li><i class="fas fa-project-diagram"></i> IC1</li>
+                <li><i class="fas fa-project-diagram"></i> IC2</li>
+                <li><i class="fas fa-project-diagram"></i> IC3</li>
+                <li><i class="fas fa-project-diagram"></i> IC4</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="أجهزة استشعار"
+              />
+              <div class="card-overlay">
+                <h3>أجهزة استشعار</h3>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>أجهزة استشعار</h3>
+              <p>مجموعة متطورة من أجهزة الاستشعار الدقيقة للقياسات المختلفة</p>
+              <ul class="card-list">
+                <li>
+                  <i class="fas fa-temperature-high"></i> مستشعر درجة الحرارة
+                </li>
+                <li><i class="fas fa-tachometer-alt"></i> مستشعر الضغط</li>
+                <li><i class="fas fa-wave-square"></i> مستشعر الحركة</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <img
+                src="https://via.placeholder.com/50x50/ffffff/1a73e8?text=RT"
+                alt="Reverse Tech Logo"
+              />
+              <h3>Reverse Tech</h3>
+            </div>
+            <p>
+              نحن متخصصون في تقديم حلول الهندسة العكسية للوحات الإلكترونية
+              وتصميم الدوائر الإلكترونية المتطورة.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h4>روابط سريعة</h4>
+            <ul>
+              <li><a href="#home">الرئيسية</a></li>
+              <li><a href="#about">من نحن</a></li>
+              <li><a href="#services">خدماتنا</a></li>
+              <li><a href="#projects">مشاريعنا</a></li>
+              <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>خدماتنا</h4>
+            <ul>
+              <li><a href="#">هندسة عكسية للوحات إلكترونية</a></li>
+              <li><a href="#">تصميم دوائر إلكترونية</a></li>
+              <li><a href="#">تصنيع لوحات PCB</a></li>
+              <li><a href="#">صيانة الأجهزة الإلكترونية</a></li>
+            </ul>
+          </div>
+
+          <div class="contact-info">
+            <h4>اتصل بنا</h4>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>القاهرة، مصر</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>01114578817</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@reversetech.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>© 2023 Reverse Tech. جميع الحقوق محفوظة</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // كود الجافاسكريبت للتحكم في تأثيرات الصفحة
+      document.addEventListener("DOMContentLoaded", function () {
+        // تأثير التمرير للبطاقات
+        const cards = document.querySelectorAll(".card");
+
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver(function (entries, observer) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = 1;
+              entry.target.style.transform = "translateY(0)";
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        cards.forEach((card) => {
+          card.style.opacity = 0;
+          card.style.transform = "translateY(50px)";
+          card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+          observer.observe(card);
+        });
+
+        // تبديل اللغة
+        const langBtn = document.querySelector(".lang-btn");
+        langBtn.addEventListener("click", function () {
+          const isEnglish = document.body.getAttribute("dir") === "ltr";
+          if (isEnglish) {
+            document.body.setAttribute("dir", "rtl");
+            document.documentElement.setAttribute("lang", "ar");
+            langBtn.innerHTML = '<i class="fas fa-globe"></i> English';
+          } else {
+            document.body.setAttribute("dir", "ltr");
+            document.documentElement.setAttribute("lang", "en");
+            langBtn.innerHTML = '<i class="fas fa-globe"></i> العربية';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

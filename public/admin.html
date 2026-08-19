@@ -1,0 +1,650 @@
+<!doctype html>
+
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>لوحة تحكم Reverse Tech</title>
+    <link href="/favicon.png" rel="icon" type="image/png" />
+    <link href="/favicon.png" rel="apple-touch-icon" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;family=Outfit:wght@300;400;500;600;700;800&amp;family=Tajawal:wght@300;400;500;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link href="admin.css" rel="stylesheet" />
+  </head>
+  <body class="admin-body">
+    <div class="login-screen" id="login">
+      <form autocomplete="on" class="login-box" id="loginForm">
+        <div class="login-logo">
+          <i class="fas fa-shield-halved"></i> Reverse Tech
+        </div>
+        <h1 class="login-title">تسجيل دخول الأدمن</h1>
+        <p class="login-subtitle">أدخل بيانات لوحة التحكم للمتابعة</p>
+        <p class="login-error" id="loginMsg" role="alert"></p>
+        <div class="login-form-group">
+          <label for="username">اسم المستخدم</label>
+          <div class="login-input-wrap">
+            <i class="fas fa-user"></i
+            ><input
+              autocomplete="username"
+              id="username"
+              name="username"
+              placeholder="اسم المستخدم"
+              required=""
+            />
+          </div>
+        </div>
+        <div class="login-form-group">
+          <label for="password">كلمة المرور</label>
+          <div class="login-input-wrap">
+            <i class="fas fa-lock"></i
+            ><input
+              autocomplete="current-password"
+              id="password"
+              name="password"
+              placeholder="كلمة المرور"
+              required=""
+              type="password"
+            />
+          </div>
+        </div>
+        <button class="login-submit-btn" type="submit">
+          <i class="fas fa-right-to-bracket"></i> دخول
+        </button>
+        <a class="login-back-link" href="index.html"
+          ><i class="fas fa-arrow-right"></i> الرجوع للموقع</a
+        >
+      </form>
+    </div>
+    <div class="admin-dashboard" id="dash">
+      <aside class="admin-sidebar">
+        <div class="admin-sidebar-brand">
+          <i class="fas fa-shield-halved"></i>
+          <div>
+            <h2>Reverse Tech</h2>
+            <span>لوحة التحكم</span>
+          </div>
+        </div>
+        <nav class="admin-sidebar-nav">
+          <button class="admin-tab-btn active" data-tab="parts">
+            <i class="fas fa-screwdriver-wrench"></i> <span>القطع الميكانيكية</span>
+          </button>
+          <button class="admin-tab-btn" data-tab="projects">
+            <i class="fas fa-diagram-project"></i> <span>المشاريع</span>
+          </button>
+          <button class="admin-tab-btn" data-tab="serviceImages">
+            <i class="fas fa-photo-film"></i> <span>وسائط الخدمات</span>
+          </button>
+          <button class="admin-tab-btn" data-tab="pricing">
+            <i class="fas fa-tags"></i> <span>إعدادات الأسعار</span>
+          </button>
+          
+          <div class="admin-sidebar-heading">إدارة الطلبات والرسائل</div>
+          <button class="admin-tab-btn" data-tab="pcbOrders">
+            <i class="fas fa-microchip"></i> <span>طلبات PCB</span>
+          </button>
+          <button class="admin-tab-btn" data-tab="printOrders">
+            <i class="fas fa-cube"></i> <span>طلبات 3D</span>
+          </button>
+          <button class="admin-tab-btn" data-tab="mechanicalOrders">
+            <i class="fas fa-gears"></i> <span>طلبات القطع</span>
+          </button>
+          <button class="admin-tab-btn" data-tab="stencilOrders">
+            <i class="fas fa-layer-group"></i> <span>طلبات Stencil</span>
+          </button>
+          <button class="admin-tab-btn" data-tab="graduationSupport">
+            <i class="fas fa-graduation-cap"></i> <span>دعم مشاريع التخرج</span>
+          </button>
+          <button class="admin-tab-btn" data-tab="contactMessages">
+            <i class="fas fa-envelope"></i> <span>رسائل اتصل بنا</span>
+          </button>
+        </nav>
+      </aside>
+
+      <div class="admin-main-wrapper">
+        <header class="admin-header">
+          <div class="admin-brand">
+            <i class="fas fa-gears"></i>
+            <div>
+              <h1 id="currentTabTitle">لوحة تحكم Reverse Tech</h1>
+              <span>إدارة المنتجات والطلبات والأسعار</span>
+            </div>
+          </div>
+          <div class="admin-header-actions">
+            <a class="admin-btn admin-btn-secondary" href="index.html" target="_blank">
+              <i class="fas fa-eye"></i> معاينة الموقع
+            </a>
+            <button class="admin-btn admin-btn-danger" id="logout">
+              <i class="fas fa-sign-out-alt"></i> خروج
+            </button>
+          </div>
+        </header>
+
+        <div class="admin-container">
+        <section class="admin-tab-panel" id="serviceImages">
+          <div class="project-form-card visible">
+            <div class="admin-section-heading">
+              <h2>
+                <i class="fas fa-photo-film"></i> صور وفيديوهات سلايدر الخدمات
+              </h2>
+            </div>
+            <p>
+              أضف أو احذف صورًا وفيديوهات لكل خدمة. يتم تبديل الوسائط تلقائيًا
+              كل 3 ثوانٍ داخل الكارت الحالي دون تغيير تصميمه.
+            </p>
+            <div id="serviceImagesEditor" class="service-images-admin"></div>
+          </div>
+        </section>
+        <section class="admin-tab-panel" id="projects">
+          <div class="project-form-card visible">
+            <div class="admin-section-heading">
+              <h2><i class="fas fa-plus-circle"></i> إضافة أو تعديل مشروع</h2>
+            </div>
+            <form id="projectForm">
+              <input id="projectId" type="hidden" />
+              <div class="form-grid">
+                <div class="field-group">
+                  <label for="projectTitleAr">العنوان بالعربي</label
+                  ><input id="projectTitleAr" required="" />
+                </div>
+                <div class="field-group">
+                  <label for="projectTitleEn">العنوان بالإنجليزية</label
+                  ><input id="projectTitleEn" required="" />
+                </div>
+                <div class="field-group">
+                  <label for="projectTagAr">التصنيف بالعربي</label
+                  ><input id="projectTagAr" required="" />
+                </div>
+                <div class="field-group">
+                  <label for="projectTagEn">التصنيف بالإنجليزية</label
+                  ><input id="projectTagEn" required="" />
+                </div>
+                <div class="field-group full-width">
+                  <label for="projectDescAr">الوصف بالعربي</label
+                  ><textarea id="projectDescAr" required="" rows="4"></textarea>
+                </div>
+                <div class="field-group full-width">
+                  <label for="projectDescEn">الوصف بالإنجليزية</label
+                  ><textarea id="projectDescEn" required="" rows="4"></textarea>
+                </div>
+                <div class="field-group full-width">
+                  <label for="projectImageFile">صورة المشروع</label
+                  ><input
+                    accept="image/*"
+                    id="projectImageFile"
+                    type="file"
+                  /><input
+                    class="image-url-input"
+                    id="projectImageUrl"
+                    placeholder="أو ضع رابط الصورة هنا"
+                  />
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="admin-btn admin-btn-primary" type="submit">
+                  <i class="fas fa-floppy-disk"></i> حفظ المشروع</button
+                ><button
+                  class="admin-btn admin-btn-secondary"
+                  id="cancelProjectEdit"
+                  type="button"
+                >
+                  <i class="fas fa-rotate-left"></i> إلغاء التعديل
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="admin-section-heading">
+            <h2><i class="fas fa-images"></i> المشاريع الموجودة</h2>
+          </div>
+          <div class="admin-projects-list" id="projectsList">
+            <div class="admin-empty-state">جاري تحميل المشاريع...</div>
+          </div>
+        </section>
+        <section class="admin-tab-panel" id="pricing">
+          <div class="admin-section-heading">
+            <h2><i class="fas fa-calculator"></i> إدارة أسعار كل الخدمات</h2>
+            <p>
+              كل الأسعار تُحفظ في Supabase، والعميل يرى السعر النهائي قبل إرسال
+              الطلب.
+            </p>
+          </div>
+          <div class="pricing-service-tabs">
+            <button
+              class="pricing-subtab active"
+              data-price-panel="pcbPricing"
+              type="button"
+            >
+              PCB
+            </button>
+            <button
+              class="pricing-subtab"
+              data-price-panel="printingPricing"
+              type="button"
+            >
+              3D Printing
+            </button>
+            <button
+              class="pricing-subtab"
+              data-price-panel="stencilPricing"
+              type="button"
+            >
+              SMT Stencil
+            </button>
+            <button
+              class="pricing-subtab"
+              data-price-panel="mechanicalPricing"
+              type="button"
+            >
+              Mechanical
+            </button>
+          </div>
+          <form class="pricing-form-panel active" id="pcbPricing">
+            <div class="pricing-card">
+              <h3>سعر السنتيمتر المربع حسب عدد الطبقات</h3>
+              <div class="form-grid">
+                <div class="field-group">
+                  <label>طبقة واحدة</label
+                  ><input id="pcbLayer1" min="0" step="0.01" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>طبقتان</label
+                  ><input id="pcbLayer2" min="0" step="0.01" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>4 طبقات</label
+                  ><input id="pcbLayer4" min="0" step="0.01" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>6 طبقات</label
+                  ><input id="pcbLayer6" min="0" step="0.01" type="number" />
+                </div>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <h3>رسوم ثابتة وإضافية</h3>
+              <div class="form-grid">
+                <div class="field-group">
+                  <label>رسوم التجهيز</label
+                  ><input id="pcbSetup" min="0" step="0.01" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>الحد الأدنى للطلب</label
+                  ><input id="pcbMinimum" min="0" step="0.01" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>السُمك القياسي</label
+                  ><input id="pcbThickness" min="0" step="0.1" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>رسوم السُمك غير القياسي</label
+                  ><input
+                    id="pcbThicknessFee"
+                    min="0"
+                    step="0.01"
+                    type="number"
+                  />
+                </div>
+                <div class="field-group">
+                  <label>زيادة الألوان غير الأخضر %</label
+                  ><input id="pcbColorFee" min="0" step="0.1" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>التصنيع العاجل %</label
+                  ><input id="pcbRush" min="0" step="0.1" type="number" />
+                </div>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <h3>خصومات الكميات</h3>
+              <div class="tier-editor" id="pcbTiers"></div>
+              <button
+                class="admin-btn admin-btn-secondary add-tier"
+                data-tier-target="pcbTiers"
+                type="button"
+              >
+                + إضافة شريحة
+              </button>
+            </div>
+            <div class="pricing-card">
+              <h3>كود الخصم</h3>
+              <div class="form-grid">
+                <div class="field-group">
+                  <label>الكود</label><input id="pcbCode" />
+                </div>
+                <div class="field-group">
+                  <label>نسبة الخصم %</label
+                  ><input
+                    id="pcbCodePercent"
+                    min="0"
+                    step="0.1"
+                    type="number"
+                  />
+                </div>
+                <label class="pricing-check"
+                  ><input id="pcbCodeActive" type="checkbox" /> الكود
+                  مفعّل</label
+                >
+              </div>
+            </div>
+            <button
+              class="admin-btn admin-btn-primary pricing-save"
+              type="submit"
+            >
+              <i class="fas fa-check"></i> حفظ إعدادات PCB
+            </button>
+          </form>
+          <form class="pricing-form-panel" id="printingPricing">
+            <div class="pricing-card">
+              <h3>أسعار 3D Printing</h3>
+              <div class="form-grid">
+                <div class="field-group">
+                  <label>رسوم التجهيز</label
+                  ><input id="printSetup" min="0" step="0.01" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>الحد الأدنى للطلب</label
+                  ><input id="printMinimum" min="0" step="0.01" type="number" />
+                </div>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-card-head">
+                <h3>سعر القطعة حسب الخامة</h3>
+                <button
+                  class="admin-btn admin-btn-secondary add-map-row"
+                  data-map-target="materialPrices"
+                  data-key-placeholder="اسم الخامة"
+                  data-value-label="سعر الوحدة"
+                  type="button"
+                >
+                  + إضافة خامة
+                </button>
+              </div>
+              <div class="dynamic-map-editor" id="materialPrices"></div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-card-head">
+                <h3>معامل التشطيب</h3>
+                <button
+                  class="admin-btn admin-btn-secondary add-map-row"
+                  data-map-target="finishingPrices"
+                  data-key-placeholder="نوع التشطيب"
+                  data-value-label="المعامل"
+                  type="button"
+                >
+                  + إضافة تشطيب
+                </button>
+              </div>
+              <div class="dynamic-map-editor" id="finishingPrices"></div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-card-head">
+                <h3>معامل السُمك</h3>
+                <button
+                  class="admin-btn admin-btn-secondary add-map-row"
+                  data-map-target="printingThickness"
+                  data-key-placeholder="السُمك بالملليمتر"
+                  data-value-label="المعامل"
+                  type="button"
+                >
+                  + إضافة سُمك
+                </button>
+              </div>
+              <div class="dynamic-map-editor" id="printingThickness"></div>
+            </div>
+            <div class="pricing-card">
+              <h3>خصومات الكميات</h3>
+              <div class="tier-editor" id="printTiers"></div>
+              <button
+                class="admin-btn admin-btn-secondary add-tier"
+                data-tier-target="printTiers"
+                type="button"
+              >
+                + إضافة شريحة
+              </button>
+            </div>
+            <button
+              class="admin-btn admin-btn-primary pricing-save"
+              type="submit"
+            >
+              حفظ أسعار 3D Printing
+            </button>
+          </form>
+          <form class="pricing-form-panel" id="stencilPricing">
+            <div class="pricing-card">
+              <h3>أسعار SMT Stencil</h3>
+              <div class="form-grid">
+                <div class="field-group">
+                  <label>السعر الأساسي</label
+                  ><input id="stencilBase" min="0" step="0.01" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>سعر سم²</label
+                  ><input id="stencilArea" min="0" step="0.01" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>رسوم التجهيز</label
+                  ><input id="stencilSetup" min="0" step="0.01" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>الحد الأدنى للطلب</label
+                  ><input
+                    id="stencilMinimum"
+                    min="0"
+                    step="0.01"
+                    type="number"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-card-head">
+                <h3>معامل السُمك</h3>
+                <button
+                  class="admin-btn admin-btn-secondary add-map-row"
+                  data-map-target="stencilThickness"
+                  data-key-placeholder="السُمك بالملليمتر"
+                  data-value-label="المعامل"
+                  type="button"
+                >
+                  + إضافة سُمك
+                </button>
+              </div>
+              <div class="dynamic-map-editor" id="stencilThickness"></div>
+            </div>
+            <div class="pricing-card">
+              <h3>خصومات الكميات</h3>
+              <div class="tier-editor" id="stencilTiers"></div>
+              <button
+                class="admin-btn admin-btn-secondary add-tier"
+                data-tier-target="stencilTiers"
+                type="button"
+              >
+                + إضافة شريحة
+              </button>
+            </div>
+            <button
+              class="admin-btn admin-btn-primary pricing-save"
+              type="submit"
+            >
+              حفظ أسعار Stencil
+            </button>
+          </form>
+          <form class="pricing-form-panel" id="mechanicalPricing">
+            <div class="pricing-card">
+              <h3>إعدادات أسعار القطع الميكانيكية</h3>
+              <p>
+                سعر كل قطعة يتحدد من تبويب القطع الميكانيكية، والإعدادات هنا
+                تطبق فوقه.
+              </p>
+              <div class="form-grid">
+                <div class="field-group">
+                  <label>رسوم تجهيز الطلب</label
+                  ><input id="mechSetup" min="0" step="0.01" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>الحد الأدنى للطلب</label
+                  ><input id="mechMinimum" min="0" step="0.01" type="number" />
+                </div>
+                <div class="field-group">
+                  <label>نسبة الطلب العاجل %</label
+                  ><input id="mechRush" min="0" step="0.1" type="number" />
+                </div>
+              </div>
+            </div>
+            <div class="pricing-card">
+              <h3>خصومات الكميات</h3>
+              <div class="tier-editor" id="mechTiers"></div>
+              <button
+                class="admin-btn admin-btn-secondary add-tier"
+                data-tier-target="mechTiers"
+                type="button"
+              >
+                + إضافة شريحة
+              </button>
+            </div>
+            <button
+              class="admin-btn admin-btn-primary pricing-save"
+              type="submit"
+            >
+              حفظ أسعار Mechanical
+            </button>
+          </form>
+          <div class="pricing-message" id="pricingMessage"></div>
+        </section>
+        <section class="admin-tab-panel active" id="parts">
+          <div class="project-form-card visible">
+            <div class="admin-section-heading">
+              <h2>
+                <i class="fas fa-plus-circle"></i> إضافة أو تعديل قطعة ميكانيكية
+              </h2>
+            </div>
+            <form id="partForm">
+              <input id="partId" type="hidden" />
+              <div class="form-grid">
+                <div class="field-group">
+                  <label for="titleAr">الاسم بالعربي</label
+                  ><input id="titleAr" required="" />
+                </div>
+                <div class="field-group">
+                  <label for="titleEn">الاسم بالإنجليزية</label
+                  ><input id="titleEn" required="" />
+                </div>
+                <div class="field-group full-width">
+                  <label for="descAr">الوصف بالعربي</label
+                  ><textarea id="descAr" rows="4"></textarea>
+                </div>
+                <div class="field-group full-width">
+                  <label for="descEn">الوصف بالإنجليزية</label
+                  ><textarea id="descEn" rows="4"></textarea>
+                </div>
+                <div class="field-group">
+                  <label for="price">السعر بالجنيه</label
+                  ><input
+                    id="price"
+                    min="0"
+                    required=""
+                    step="0.01"
+                    type="number"
+                  />
+                </div>
+                <div class="field-group">
+                  <label for="time">مدة التصنيع</label
+                  ><input id="time" placeholder="مثال: 3-5 أيام" />
+                </div>
+                <div class="field-group full-width">
+                  <label for="imageFile">صورة القطعة</label
+                  ><input accept="image/*" id="imageFile" type="file" /><input
+                    class="image-url-input"
+                    id="imageUrl"
+                    placeholder="أو ضع رابط الصورة هنا"
+                  />
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="admin-btn admin-btn-primary" type="submit">
+                  <i class="fas fa-floppy-disk"></i> حفظ القطعة</button
+                ><button
+                  class="admin-btn admin-btn-secondary"
+                  id="cancelEdit"
+                  type="button"
+                >
+                  <i class="fas fa-rotate-left"></i> إلغاء التعديل
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="admin-section-heading">
+            <h2><i class="fas fa-boxes-stacked"></i> القطع الموجودة</h2>
+          </div>
+          <div class="admin-projects-list" id="partsList">
+            <div class="admin-empty-state">جاري تحميل القطع...</div>
+          </div>
+        </section>
+        <section class="admin-tab-panel" id="printOrders">
+          <div class="pcb-orders-list" id="printList"></div>
+        </section>
+        <section class="admin-tab-panel" id="mechanicalOrders">
+          <div class="pcb-orders-list" id="mechanicalOrdersList"></div>
+        </section>
+        <section class="admin-tab-panel" id="stencilOrders">
+          <div class="pcb-orders-list" id="stencilList"></div>
+        </section>
+        <section class="admin-tab-panel" id="pcbOrders">
+          <div class="pcb-orders-list" id="pcbList"></div>
+        </section>
+        <section class="admin-tab-panel" id="graduationSupport">
+          <div class="project-form-card visible">
+            <div class="admin-section-heading">
+              <h2><i class="fas fa-graduation-cap"></i> دعم مشاريع التخرج</h2>
+            </div>
+            <p>إدارة حالة التسجيل، وموعد الفتح والإغلاق، ورسائل إغلاق التسجيل للزوار.</p>
+            <form id="graduationSupportConfigForm">
+              <div class="form-grid">
+                <div class="field-group">
+                  <label for="graduationStartDate">تاريخ بدء التسجيل</label>
+                  <input id="graduationStartDate" type="date" />
+                </div>
+                <div class="field-group">
+                  <label for="graduationEndDate">تاريخ انتهاء التسجيل</label>
+                  <input id="graduationEndDate" type="date" />
+                </div>
+                <div class="field-group full-width">
+                  <label for="closedMessageAr">رسالة الإغلاق بالعربي</label>
+                  <textarea id="closedMessageAr" rows="3"></textarea>
+                </div>
+                <div class="field-group full-width">
+                  <label for="closedMessageEn">رسالة الإغلاق بالإنجليزية</label>
+                  <textarea id="closedMessageEn" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="admin-btn admin-btn-primary" type="submit">
+                  <i class="fas fa-floppy-disk"></i> حفظ الإعدادات</button>
+              </div>
+            </form>
+          </div>
+          <div class="admin-section-heading">
+            <h2><i class="fas fa-list"></i> طلبات دعم مشاريع التخرج</h2>
+          </div>
+          <div class="admin-projects-list" id="graduationRequestsList">
+            <div class="admin-empty-state">جاري تحميل الطلبات...</div>
+          </div>
+        </section>
+        <section class="admin-tab-panel" id="contactMessages">
+          <div class="pcb-orders-list" id="contactMessagesList"></div>
+        </section>
+      </div>
+    </main>
+    <div id="toastContainer" class="admin-toast-container"></div>
+    <script src="admin-v2.js"></script>
+  </body>
+</html>

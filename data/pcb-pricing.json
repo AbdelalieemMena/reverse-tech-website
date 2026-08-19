@@ -1,0 +1,30 @@
+{
+  "pricePerCm2ByLayers": {
+    "1": 1.2,
+    "2": 2.2,
+    "4": 6.5,
+    "6": 11
+  },
+  "standardThicknessMm": 1.6,
+  "colorSurchargePercent": 15,
+  "thicknessSurchargeEGP": 60,
+  "setupFeeEGP": 150,
+  "minimumOrderEGP": 250,
+  "rushSurchargePercent": 30,
+  "quantityDiscountTiers": [
+    { "minQty": 1, "discountPercent": 0 },
+    { "minQty": 10, "discountPercent": 5 },
+    { "minQty": 50, "discountPercent": 10 },
+    { "minQty": 100, "discountPercent": 15 },
+    { "minQty": 500, "discountPercent": 22 }
+  ],
+  "discountCode": {
+    "code": "REVERSE10",
+    "discountPercent": 10,
+    "active": true
+  },
+  "estimatedLeadTime": {
+    "standard": "أسبوعين إلى ثلاثة أسابيع",
+    "rush": "أسبوع واحد (شحن/تصنيع عاجل)"
+  }
+}

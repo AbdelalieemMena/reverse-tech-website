@@ -1,0 +1,13 @@
+تشغيل المشروع:
+1) ضع ملف .env بجوار server.js
+2) افتح Terminal في مجلد المشروع
+3) شغّل: npm install
+4) شغّل: npm start
+5) افتح: http://localhost:3000
+
+الرابط الرئيسي يفتح الموقع (index.html) وليس لوحة الأدمن.
+لوحة الأدمن فقط: http://localhost:3000/admin.html
+
+مهم: لا تفتح admin.html بالضغط المزدوج إذا كنت تريد الموقع الرئيسي.
+
+مهم للسلايدر: شغّل ملف SUPABASE-SERVICE-IMAGES-MIGRATION.sql مرة واحدة داخل Supabase SQL Editor.

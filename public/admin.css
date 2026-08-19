@@ -1,0 +1,906 @@
+/* ==========================================================================
+   لوحة تحكم Reverse Tech - تنسيقات خاصة (تعتمد على متغيرات الألوان في style.css)
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.admin-body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f4f8fc;
+    color: var(--dark-color);
+    min-height: 100vh;
+}
+
+/* -------------------- شاشة تسجيل الدخول -------------------- */
+.login-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(var(--primary-dark-rgb), 0.92), rgba(var(--primary-darker-rgb), 0.96));
+    padding: 20px;
+}
+
+.login-box {
+    background-color: white;
+    border-radius: 14px;
+    padding: 45px 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.login-box .login-logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+}
+
+.login-box .login-subtitle {
+    color: var(--gray-color);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.login-form-group {
+    text-align: right;
+    margin-bottom: 18px;
+}
+
+.login-form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--dark-color);
+}
+
+.login-form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.login-form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.login-submit-btn {
+    width: 100%;
+    padding: 13px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.login-submit-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.login-error {
+    background-color: #fdecea;
+    color: #c0392b;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+    display: none;
+}
+
+.login-error.visible {
+    display: block;
+}
+
+.login-note {
+    margin-top: 22px;
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    line-height: 1.6;
+}
+
+/* -------------------- لوحة التحكم -------------------- */
+/* -------------------- لوحة التحكم والسلايدبار (Sidebar Layout) -------------------- */
+.admin-dashboard {
+    display: none;
+    min-height: 100vh;
+}
+
+.admin-dashboard.visible {
+    display: flex;
+}
+
+.admin-sidebar {
+    width: 280px;
+    flex: 0 0 280px;
+    background: #092640;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 25px rgba(0,0,0,0.12);
+    z-index: 10;
+}
+
+.admin-sidebar-brand {
+    padding: 24px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.admin-sidebar-brand i {
+    font-size: 2rem;
+    color: #05b9aa;
+}
+
+.admin-sidebar-brand h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+}
+
+.admin-sidebar-brand span {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.admin-sidebar-nav {
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.admin-sidebar-heading {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #64748b;
+    padding: 14px 12px 6px;
+    letter-spacing: 0.5px;
+}
+
+.admin-sidebar-nav .admin-tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    color: #cbd5e1;
+    font-size: 0.93rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: right;
+    transition: all 0.25s ease;
+}
+
+.admin-sidebar-nav .admin-tab-btn i {
+    font-size: 1.1rem;
+    width: 22px;
+    text-align: center;
+    color: #94a3b8;
+    transition: color 0.25s ease;
+}
+
+.admin-sidebar-nav .admin-tab-btn:hover {
+    background: rgba(255,255,255,0.07);
+    color: #fff;
+}
+
+.admin-sidebar-nav .admin-tab-btn:hover i {
+    color: #05b9aa;
+}
+
+.admin-sidebar-nav .admin-tab-btn.active {
+    background: linear-gradient(135deg, #087ed1, #05b9aa);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(8,126,209,0.3);
+}
+
+.admin-sidebar-nav .admin-tab-btn.active i {
+    color: #fff;
+}
+
+/* Main Content Wrapper */
+.admin-main-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #f4f8fc;
+}
+
+.admin-header {
+    background-color: #ffffff;
+    color: #0f172a;
+    padding: 16px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.admin-header .admin-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-header .admin-brand i {
+    font-size: 1.6rem;
+    color: #087ed1;
+}
+
+.admin-header h1 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.admin-header span {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.admin-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 24px 60px;
+    flex: 1;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 900px) {
+    .admin-dashboard.visible {
+        flex-direction: column;
+    }
+    .admin-sidebar {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+    .admin-sidebar-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px;
+    }
+    .admin-sidebar-heading {
+        display: none;
+    }
+    .admin-sidebar-nav .admin-tab-btn {
+        white-space: nowrap;
+    }
+}
+
+/* ================= Pagination Styles ================= */
+.admin-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #e2e8f0;
+    grid-column: 1 / -1;
+}
+
+.admin-pagination-btn {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    color: #334155;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.admin-pagination-btn:hover:not(:disabled) {
+    border-color: #087ed1;
+    color: #087ed1;
+    background: #f0f7fc;
+}
+
+.admin-pagination-btn.active {
+    background: #087ed1;
+    border-color: #087ed1;
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(8,126,209,0.25);
+}
+
+.admin-pagination-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.admin-gerber-dl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #087ed1;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: background 0.2s ease;
+    margin-top: 8px;
+}
+
+.admin-gerber-dl-btn:hover {
+    background: #0665a8;
+}
+
+.admin-toast {
+    background-color: #e8f8ee;
+    color: #1e7e42;
+    border: 1px solid #b9ecc8;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.admin-toast.visible {
+    display: block;
+}
+
+/* -------------------- فورم إضافة / تعديل مشروع -------------------- */
+.project-form-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 26px;
+    box-shadow: 0 5px 20px rgba(var(--primary-rgb), 0.08);
+    margin-bottom: 35px;
+    display: none;
+}
+
+.project-form-card.visible {
+    display: block;
+}
+
+.project-form-card h2 {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+.field-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--dark-color);
+}
+
+.field-group .field-hint {
+    font-weight: 400;
+    color: var(--gray-color);
+    font-size: 0.78rem;
+}
+
+.field-group input,
+.field-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.92rem;
+    resize: vertical;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+/* -------------------- شبكة عرض المشاريع الحالية -------------------- */
+.admin-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.admin-section-heading h2 {
+    font-size: 1.1rem;
+    color: var(--dark-color);
+}
+
+.admin-projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.admin-project-item {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.08);
+}
+
+.admin-project-item .admin-project-image {
+    width: 100%;
+    height: 150px;
+    background-color: var(--light-color);
+    overflow: hidden;
+}
+
+.admin-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.admin-project-body {
+    padding: 16px;
+}
+
+.admin-project-tag {
+    display: inline-block;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+}
+
+.admin-project-body h3 {
+    font-size: 0.98rem;
+    margin-bottom: 6px;
+    color: var(--dark-color);
+}
+
+.admin-project-body p {
+    font-size: 0.85rem;
+    color: var(--gray-color);
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.admin-project-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.admin-empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--gray-color);
+    background-color: white;
+    border-radius: 12px;
+}
+
+/* -------------------- التبويبات -------------------- */
+.admin-tabs {
+    display: flex;
+    gap: 6px;
+    background-color: white;
+    padding: 8px;
+    margin: 0 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(var(--primary-rgb), 0.08);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.admin-tab-btn {
+    flex: 1;
+    min-width: 140px;
+    padding: 12px 16px;
+    border: none;
+    background: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--gray-color);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.admin-tab-btn:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+.admin-tab-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.admin-tab-badge {
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 20px;
+    min-width: 18px;
+}
+
+.admin-tab-btn.active .admin-tab-badge {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.admin-tab-panel {
+    display: none;
+}
+
+.admin-tab-panel.active {
+    display: block;
+}
+
+/* -------------------- إعدادات أسعار PCB -------------------- */
+.pcb-admin-notice {
+    background-color: rgba(var(--primary-rgb), 0.08);
+    color: var(--primary-dark);
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.pcb-settings-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 5px 20px rgba(var(--primary-rgb), 0.08);
+    margin-bottom: 22px;
+}
+
+.pcb-settings-card h2 {
+    font-size: 1.02rem;
+    color: var(--primary-color);
+    margin-bottom: 18px;
+}
+
+.pcb-checkbox-label-admin {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.pcb-checkbox-label-admin input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.quantity-tiers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.quantity-tier-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 14px;
+    align-items: end;
+    background-color: var(--light-color);
+    padding: 14px;
+    border-radius: 8px;
+}
+
+#savePricingBtn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+/* -------------------- طلبات PCB الواردة -------------------- */
+.pcb-orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pcb-order-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.08);
+    overflow: hidden;
+}
+
+.pcb-order-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px 18px;
+    background-color: var(--light-color);
+}
+
+.pcb-order-card-header strong {
+    color: var(--dark-color);
+    margin-left: 10px;
+}
+
+.order-status-select {
+    padding: 6px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.82rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.pcb-order-card-body {
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+}
+
+.pcb-order-card-body i {
+    color: var(--primary-color);
+    width: 18px;
+    text-align: center;
+}
+
+.pcb-rush-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #fff3e0;
+    color: #b8720a;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.pcb-order-price {
+    background-color: rgba(var(--accent-rgb), 0.08);
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: var(--dark-color) !important;
+}
+
+.pcb-order-price i {
+    color: var(--accent-color) !important;
+}
+
+.pcb-order-card-actions {
+    padding: 12px 18px;
+    border-top: 1px solid #eef2f6;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 640px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quantity-tier-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== إصلاح واجهة تسجيل الدخول ولوحة التحكم V2 ===== */
+.login-box { max-width: 520px; padding: 42px; }
+.login-title { font-family: 'Cairo', sans-serif; font-size: 1.8rem; margin: 12px 0 6px; color: var(--dark-color); }
+.login-input-wrap { position: relative; }
+.login-input-wrap > i { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--primary-color); z-index: 2; }
+.login-input-wrap input { display: block; width: 100%; padding: 13px 44px 13px 14px; border: 2px solid #dfe7ef; border-radius: 10px; background: #fff; font-family: inherit; font-size: 1rem; }
+.login-input-wrap input:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(var(--primary-rgb), .1); }
+.login-error { margin: 0 0 16px; }
+.login-error:empty { display: none; }
+.login-error:not(:empty) { display: block; }
+.login-back-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 20px; color: var(--primary-color); text-decoration: none; font-weight: 700; }
+.admin-dashboard { min-height: 100vh; background: #f4f8fc; }
+.admin-brand { display: flex; align-items: center; gap: 12px; }
+.admin-brand > i { font-size: 1.8rem; }
+.admin-brand span { display: block; opacity: .8; font-size: .8rem; margin-top: 2px; }
+.project-form-card { display: block; }
+.image-url-input { margin-top: 10px; }
+.admin-project-card { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 5px 18px rgba(var(--primary-rgb),.09); display: grid; grid-template-columns: 100px 1fr auto; gap: 16px; align-items: center; }
+.admin-project-card img { width: 100px; height: 86px; object-fit: cover; border-radius: 9px; background: var(--light-color); }
+.admin-project-card h3 { font-size: 1rem; margin-bottom: 5px; }
+.admin-project-card p { color: var(--gray-color); font-size: .86rem; margin-bottom: 5px; }
+.admin-project-card > div:last-child { display: flex; gap: 8px; flex-wrap: wrap; }
+.projects-page-main { min-height: 430px; padding: 60px 0 80px; }
+.projects-loading { text-align: center; padding: 70px 20px; color: var(--gray-color); font-size: 1.05rem; }
+@media (max-width: 700px) {
+  .login-box { padding: 30px 22px; }
+  .admin-project-card { grid-template-columns: 80px 1fr; }
+  .admin-project-card img { width: 80px; height: 72px; }
+  .admin-project-card > div:last-child { grid-column: 1 / -1; }
+}
+.pricing-service-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.pricing-subtab{border:1px solid #c9d9e8;background:#fff;padding:12px 24px;border-radius:10px;font:inherit;font-weight:700;cursor:pointer}.pricing-subtab.active{background:#087ed1;color:#fff;border-color:#087ed1}.pricing-form-panel{display:none}.pricing-form-panel.active{display:block}.pricing-card{background:#fff;border-radius:16px;padding:24px;margin-bottom:22px;box-shadow:0 8px 28px rgba(17,77,120,.06)}.pricing-card h3{color:#087ed1;margin:0 0 18px}.tier-row{display:grid;grid-template-columns:1fr 1fr auto;gap:14px;align-items:end;background:#edf5fb;border-radius:12px;padding:14px;margin-bottom:12px}.tier-row label{font-weight:700;display:block;margin-bottom:6px}.tier-row input{width:100%;padding:12px;border:1px solid #d1dfeb;border-radius:8px}.tier-remove{border:0;background:#ffe7e2;color:#d62d20;padding:13px 16px;border-radius:10px;cursor:pointer}.pricing-save{width:100%;justify-content:center;font-size:18px;margin-bottom:18px}.pricing-check{display:flex;align-items:center;gap:8px;font-weight:700}.pricing-message{display:none;padding:14px;border-radius:10px;margin:15px 0}.pricing-message.show{display:block}.pricing-message.success{background:#e9fbf6;color:#087b65}.pricing-message.error{background:#fff0ed;color:#b42318}@media(max-width:700px){.tier-row{grid-template-columns:1fr}.pricing-service-tabs{display:grid;grid-template-columns:1fr 1fr}}
+.pricing-card-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}.pricing-card-head h3{margin:0!important}.dynamic-map-editor{display:flex;flex-direction:column;gap:12px}.map-row{display:grid;grid-template-columns:1.2fr 1fr auto;gap:14px;align-items:end;background:#edf5fb;border-radius:12px;padding:14px}.map-row label{font-weight:700;display:block;margin-bottom:6px}.map-row input{width:100%;padding:12px;border:1px solid #d1dfeb;border-radius:8px;font:inherit;background:#fff}.map-remove{border:0;background:#ffe7e2;color:#d62d20;padding:13px 16px;border-radius:10px;cursor:pointer}.map-remove:hover{background:#ffd7d0}.dynamic-map-editor:empty:after{content:'لا توجد عناصر حالياً — اضغط زر الإضافة بالأعلى';display:block;text-align:center;color:#718096;background:#f7fafc;border:1px dashed #cbd5e0;border-radius:10px;padding:18px}@media(max-width:700px){.pricing-card-head{align-items:stretch;flex-direction:column}.map-row{grid-template-columns:1fr}.map-remove{width:100%}}
+
+
+/* ===== تصميم احترافي لتبويبات الطلبات ===== */
+#pcbOrders, #printOrders, #stencilOrders { padding-top: 8px; }
+.pcb-orders-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,1fr)); gap:22px; align-items:start; }
+.modern-order-card { background:#fff; border:1px solid #dce9f5; border-radius:18px; overflow:hidden; box-shadow:0 10px 30px rgba(1,90,156,.08); transition:transform .25s ease,box-shadow .25s ease; }
+.modern-order-card:hover { transform:translateY(-3px); box-shadow:0 16px 38px rgba(1,90,156,.14); }
+.modern-order-head { display:flex; align-items:center; gap:13px; padding:18px 20px; background:linear-gradient(135deg,#f1f8ff,#e9f6f5); border-bottom:1px solid #e2edf7; }
+.modern-order-icon { width:46px; height:46px; flex:0 0 46px; border-radius:13px; display:grid; place-items:center; color:#fff; font-size:1.15rem; background:linear-gradient(135deg,var(--primary-color),var(--accent-color)); }
+.modern-order-head h3 { margin:0 0 3px; color:var(--dark-color); font-family:'Cairo',sans-serif; font-size:1rem; }
+.modern-order-head p { margin:0; color:var(--gray-color); direction:ltr; text-align:right; font-family:'Outfit','Tajawal',sans-serif; }
+.order-status-badge { margin-inline-start:auto; padding:7px 12px; border-radius:999px; background:#e5faf6; color:#087f73; font-weight:800; white-space:nowrap; font-size:.8rem; }
+.modern-order-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; padding:8px 20px 18px; }
+.modern-order-field { padding:13px 8px; border-bottom:1px dashed #dce6ef; min-width:0; }
+.modern-order-field:nth-last-child(-n+2) { border-bottom:0; }
+.modern-order-field span { display:block; color:#6b7f92; font-size:.78rem; font-weight:700; margin-bottom:5px; }
+.modern-order-field strong { display:block; color:#102f4d; font-size:.92rem; font-weight:700; overflow-wrap:anywhere; white-space:normal; }
+.order-details summary { cursor:pointer; color:var(--primary-color); font-weight:800; }
+.order-details pre { margin-top:9px; max-height:220px; overflow:auto; direction:ltr; text-align:left; padding:12px; border-radius:10px; background:#f5f8fb; color:#17324d; font:12px/1.6 monospace; }
+.orders-loading,.orders-empty { grid-column:1/-1; min-height:230px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; text-align:center; background:#fff; border:1px dashed #bfd3e5; border-radius:18px; color:#61778b; }
+.orders-loading i,.orders-empty i { font-size:2rem; color:var(--primary-color); }
+.orders-empty h3 { font-family:'Cairo',sans-serif; color:#173b5d; margin:0; }
+.orders-empty p { margin:0; }
+.orders-empty.error i { color:#d54a3a; }
+@media(max-width:720px){.pcb-orders-list{grid-template-columns:1fr}.modern-order-grid{grid-template-columns:1fr}.modern-order-field:nth-last-child(-n+2){border-bottom:1px dashed #dce6ef}.modern-order-field:last-child{border-bottom:0}.modern-order-head{align-items:flex-start}.order-status-badge{font-size:.72rem}}
+
+/* الخطوط الموحدة المطلوبة */
+body.admin-body, body.admin-body input, body.admin-body select, body.admin-body textarea, body.admin-body button { font-family:'Tajawal',sans-serif; }
+body.admin-body h1, body.admin-body h2, body.admin-body h3, body.admin-body h4, body.admin-body h5, body.admin-body h6 { font-family:'Cairo',sans-serif; }
+html[lang="en"] body.admin-body, html[dir="ltr"] body.admin-body { font-family:'Outfit',sans-serif; }
+html[lang="en"] body.admin-body h1, html[lang="en"] body.admin-body h2, html[lang="en"] body.admin-body h3, html[lang="en"] body.admin-body h4, html[dir="ltr"] body.admin-body h1, html[dir="ltr"] body.admin-body h2, html[dir="ltr"] body.admin-body h3, html[dir="ltr"] body.admin-body h4 { font-family:'Inter',sans-serif; }
+
+/* Order workflow controls */
+#mechanicalOrders{padding-top:8px}.order-admin-actions{display:flex;align-items:end;gap:10px;flex-wrap:wrap;padding:16px 20px 20px;border-top:1px solid #e2edf7;background:#fbfdff}.order-admin-actions label{flex:1;min-width:190px;font-weight:800;color:#173b5d}.order-status-select{display:block;width:100%;margin-top:7px;padding:11px 12px;border:1px solid #cdddea;border-radius:9px;background:#fff;font:inherit}.order-admin-actions .admin-btn{min-height:44px}@media(max-width:650px){.order-admin-actions{align-items:stretch}.order-admin-actions label,.order-admin-actions .admin-btn{width:100%}}
+
+.service-images-admin{display:grid;gap:18px;margin-top:18px}.service-image-admin-card{background:#fff;border:1px solid #dfe8ef;border-radius:14px;padding:16px}.service-image-admin-card h3{margin:0 0 12px}.service-image-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}.service-image-item{border:1px solid #dfe8ef;border-radius:10px;padding:8px}.service-image-item img{width:100%;height:100px;object-fit:cover;border-radius:7px}.service-image-item input{width:100%;margin:7px 0}.service-upload-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.service-upload-row input[type=url]{flex:1;min-width:220px}
+
+.service-image-item video{width:100%;height:100px;object-fit:cover;border-radius:7px;background:#092f4a}.service-image-item select,.service-upload-row select{min-height:42px;border:1px solid #ccdbe7;border-radius:8px;padding:7px 10px;background:#fff}.service-image-item select{width:100%;margin:0 0 8px}.service-media-help{display:block;margin-top:10px;color:#6b8092;line-height:1.7}
+
+/* ================= Toast Notification System ================= */
+.admin-toast-container {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 380px;
+    width: calc(100% - 48px);
+    pointer-events: none;
+}
+
+.admin-toast {
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: #fff;
+    color: #0c2340;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.08);
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.5;
+    border-right: 5px solid #087ed1;
+    animation: toastSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.admin-toast.admin-toast-success {
+    border-right-color: #28a745;
+    background: #f4fbf6;
+    color: #155724;
+}
+
+.admin-toast.admin-toast-error {
+    border-right-color: #dc3545;
+    background: #fdf3f4;
+    color: #721c24;
+}
+
+.admin-toast.admin-toast-info {
+    border-right-color: #087ed1;
+    background: #f0f7fc;
+    color: #0c4a6e;
+}
+
+.admin-toast i {
+    font-size: 1.2rem;
+    flex: 0 0 auto;
+}
+
+.admin-toast-success i { color: #28a745; }
+.admin-toast-error i { color: #dc3545; }
+.admin-toast-info i { color: #087ed1; }
+
+@keyframes toastSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+

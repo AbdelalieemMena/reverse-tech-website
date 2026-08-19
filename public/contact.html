@@ -1,0 +1,387 @@
+<!doctype html>
+
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>اتصل بنا | Reverse Tech</title>
+    <link href="/favicon.png" rel="icon" type="image/png" />
+    <link href="/favicon.png" rel="apple-touch-icon" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;family=Outfit:wght@300;400;500;600;700;800&amp;family=Tajawal:wght@300;400;500;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <div class="contact-number">
+          <i class="fas fa-phone"></i
+          ><span data-ar="اتصل بنا: 01114578817" data-en="Call us: 01114578817"
+            >اتصل بنا: 01114578817</span
+          >
+        </div>
+        <div class="top-bar-actions">
+          <a class="contact-button" href="contact.html"
+            ><i class="fas fa-envelope"></i
+            ><span data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</span></a
+          ><button
+            aria-label="تغيير اللغة"
+            class="top-language-btn"
+            id="pageLanguageToggle"
+            type="button"
+          >
+            <i class="fas fa-globe"></i><span>English</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="container navbar">
+        <a class="logo" href="index.html"
+          ><img alt="Reverse Tech" src="/media/public/LogoReverseTeck-W.jpg"
+        /></a>
+        <div class="nav-content">
+          <button aria-label="فتح القائمة" class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li>
+              <a data-ar="الرئيسية" data-en="Home" href="index.html"
+                >الرئيسية</a
+              >
+            </li>
+            <li>
+              <a data-ar="من نحن" data-en="About Us" href="about.html"
+                >من نحن</a
+              >
+            </li>
+            <li>
+              <a data-ar="خدماتنا" data-en="Services" href="services.html"
+                >خدماتنا</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-cta-link"
+                data-ar="اطلب الآن"
+                data-en="Order Now"
+                href="order.html"
+                >اطلب الآن</a
+              >
+            </li>
+            <li>
+              <a data-ar="مشاريعنا" data-en="Projects" href="projects.html"
+                >مشاريعنا</a
+              >
+            </li>
+            <li>
+              <a data-ar="عملائنا" data-en="Clients" href="clients.html"
+                >عملائنا</a
+              >
+            </li>
+            <li>
+              <a
+                class="active"
+                data-ar="اتصل بنا"
+                data-en="Contact Us"
+                href="contact.html"
+                >اتصل بنا</a
+              >
+            </li>
+            <li>
+              <a class="signin-link" href="admin.html"
+                ><i class="fas fa-user"></i>
+                <span data-ar="تسجيل الدخول" data-en="Sign In"
+                  >تسجيل الدخول</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="page-hero">
+      <h1 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h1>
+    </section>
+    <main class="inner-page">
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-container">
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h3 data-ar="عنواننا" data-en="Address">عنواننا</h3>
+                  <p
+                    data-ar="قطعة 9368 شارع هدى شعراوى – المقطم – القاهرة – مصر"
+                    data-en="Plot 9368, Hoda Shaarawi Street, Mokattam, Cairo, Egypt"
+                  >
+                    قطعة 9368 شارع هدى شعراوى – المقطم – القاهرة – مصر
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h3 data-ar="هاتفنا" data-en="Phone">هاتفنا</h3>
+                  <p>01114578817</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h3 data-ar="البريد الإلكتروني" data-en="Email">
+                    البريد الإلكتروني
+                  </h3>
+                  <p>info@reversetech-med.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form">
+              <h3 data-ar="أرسل رسالة" data-en="Send a Message">أرسل رسالة</h3>
+              <form id="contactForm">
+                <div class="form-group">
+                  <label data-ar="الاسم" data-en="Name">الاسم</label
+                  ><input
+                    autocomplete="name"
+                    id="contactName"
+                    name="name"
+                    required=""
+                  />
+                </div>
+                <div class="form-group">
+                  <label data-ar="البريد الإلكتروني" data-en="Email"
+                    >البريد الإلكتروني</label
+                  ><input
+                    autocomplete="email"
+                    id="contactEmail"
+                    name="email"
+                    required=""
+                    type="email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label data-ar="رقم الهاتف" data-en="Phone">رقم الهاتف</label
+                  ><input
+                    autocomplete="tel"
+                    id="contactPhone"
+                    name="phone"
+                    type="tel"
+                  />
+                </div>
+                <div class="form-group">
+                  <label data-ar="الشركة (اختياري)" data-en="Company (optional)"
+                    >الشركة (اختياري)</label
+                  ><input id="contactCompany" name="company" />
+                </div>
+                <div class="form-group">
+                  <label data-ar="الخدمة المطلوبة" data-en="Requested service"
+                    >الخدمة المطلوبة</label
+                  ><select id="contactService" name="service">
+                    <option value="">اختر الخدمة</option>
+                    <option>تصميم وتصنيع وتجميع PCB</option>
+                    <option>صيانة اللوحات الإلكترونية</option>
+                    <option>خدمات التشغيل بالـ CNC</option>
+                    <option>الطباعة ثلاثية الأبعاد</option>
+                    <option>الهندسة العكسية للأجهزة الطبية</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label data-ar="الرسالة" data-en="Message">الرسالة</label
+                  ><textarea
+                    id="contactMessage"
+                    name="message"
+                    required=""
+                  ></textarea>
+                </div>
+                <button
+                  class="submit-btn"
+                  data-ar="إرسال"
+                  data-en="Send"
+                  id="contactSubmit"
+                  type="submit"
+                >
+                  إرسال
+                </button>
+                <p
+                  aria-live="polite"
+                  class="contact-status"
+                  id="contactStatus"
+                  role="status"
+                ></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <img alt="Reverse Tech Logo" src="/media/public/LogoReverseTeck-W2.png" />
+            </div>
+            <p
+              data-ar="تُعد شركة ريفرس تك مصدرًا شاملًا لاحتياجات شركات الأجهزة الطبية والمستشفيات، وتتخصص في تصميم وتصنيع وصيانة المكونات الإلكترونية والبلاستيكية والمعدنية."
+              data-en="Reverse Tech provides integrated solutions for medical-equipment companies and hospitals, specializing in the design, manufacturing, and maintenance of electronic, plastic, and metal components."
+            >
+              تُعد شركة ريفرس تك مصدرًا شاملًا لاحتياجات شركات الأجهزة الطبية
+              والمستشفيات، وتتخصص في تصميم وتصنيع وصيانة المكونات الإلكترونية
+              والبلاستيكية والمعدنية.
+            </p>
+            <div class="social-icons">
+              <a
+                aria-label="Facebook"
+                href="https://www.facebook.com/Reversetechmed"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook-f"></i></a
+              ><a aria-label="Twitter" href="#"
+                ><i class="fab fa-twitter"></i></a
+              ><a
+                aria-label="Instagram"
+                href="https://www.instagram.com/reverse.tech2024/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i></a
+              ><a
+                aria-label="LinkedIn"
+                href="https://www.linkedin.com/company/reverse-tech-med/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+            <ul>
+              <li>
+                <a data-ar="الرئيسية" data-en="Home" href="index.html"
+                  >الرئيسية</a
+                >
+              </li>
+              <li>
+                <a data-ar="من نحن" data-en="About Us" href="about.html"
+                  >من نحن</a
+                >
+              </li>
+              <li>
+                <a data-ar="خدماتنا" data-en="Services" href="services.html"
+                  >خدماتنا</a
+                >
+              </li>
+              <li>
+                <a data-ar="اطلب الآن" data-en="Order Now" href="order.html"
+                  >اطلب الآن</a
+                >
+              </li>
+              <li>
+                <a data-ar="عملائنا" data-en="Clients" href="clients.html"
+                  >عملائنا</a
+                >
+              </li>
+              <li>
+                <a data-ar="مشاريعنا" data-en="Projects" href="projects.html"
+                  >مشاريعنا</a
+                >
+              </li>
+              <li>
+                <a data-ar="اتصل بنا" data-en="Contact Us" href="contact.html"
+                  >اتصل بنا</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h4>
+            <ul>
+              <li>
+                <a
+                  data-ar="تصميم وتصنيع وتجميع اللوحات الإلكترونية (PCB)"
+                  data-en="PCB Design, Manufacturing &amp; Assembly"
+                  href="pcb-manufacturing-service.html"
+                  >تصميم وتصنيع وتجميع اللوحات الإلكترونية (PCB)</a
+                >
+              </li>
+              <li>
+                <a
+                  data-ar="صيانة اللوحات الإلكترونية"
+                  data-en="PCB Maintenance"
+                  href="pcb-maintenance-service.html"
+                  >صيانة اللوحات الإلكترونية</a
+                >
+              </li>
+              <li>
+                <a
+                  data-ar="خدمات التشغيل بالـ CNC"
+                  data-en="CNC Machining"
+                  href="cnc-service.html"
+                  >خدمات التشغيل بالـ CNC</a
+                >
+              </li>
+              <li>
+                <a
+                  data-ar="المسح والتصميم والطباعة ثلاثية الأبعاد"
+                  data-en="3D Scanning, Design &amp; Printing"
+                  href="3d-printing-service.html"
+                  >المسح والتصميم والطباعة ثلاثية الأبعاد</a
+                >
+              </li>
+              <li>
+                <a
+                  data-ar="الهندسة العكسية للأجهزة الطبية"
+                  data-en="Medical Device Reverse Engineering"
+                  href="reverse-engineering-service.html"
+                  >الهندسة العكسية للأجهزة الطبية</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-subscribe">
+            <h4 data-ar="اشترك في النشرة البريدية" data-en="Newsletter">
+              اشترك في النشرة البريدية
+            </h4>
+            <p
+              data-ar="اشترك لتصلك آخر أخبارنا وعروضنا"
+              data-en="Subscribe for our latest news and offers"
+            >
+              اشترك لتصلك آخر أخبارنا وعروضنا
+            </p>
+            <form class="subscribe-form">
+              <input
+                data-ar="بريدك الإلكتروني"
+                data-en="Your email"
+                placeholder="بريدك الإلكتروني"
+                required="True"
+                type="email"
+              /><button type="submit">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="copyright">
+          <p
+            data-ar="© 2026 Reverse Tech. جميع الحقوق محفوظة"
+            data-en="© 2026 Reverse Tech. All rights reserved"
+          >
+            © 2026 Reverse Tech. جميع الحقوق محفوظة
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="page-header.js"></script>
+    <script src="contact.js"></script>
+    <script src="newsletter.js?v=1"></script>
+  </body>
+</html>

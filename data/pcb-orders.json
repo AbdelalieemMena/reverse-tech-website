@@ -1,0 +1,31 @@
+[
+  {
+    "id": "p_1783853454173_xkfqa5",
+    "customer_name": "Abdelalieem Ahmed Abdelalieem",
+    "customer_phone": "01154061733",
+    "customer_email": "abmena333@gmail.com",
+    "layers": "2",
+    "quantity": "10",
+    "width_mm": "100",
+    "length_mm": "100",
+    "thickness_mm": "1.6",
+    "color": "green",
+    "rush": false,
+    "discount_code": "",
+    "gerber_filename": null,
+    "gerber_original_name": null,
+    "quote": {
+      "price_before_discount": 2350,
+      "discount_value": 117,
+      "final_price": 2233,
+      "price_per_unit": 223,
+      "quantity": 10,
+      "currency": "EGP",
+      "lead_time": "أسبوعين إلى ثلاثة أسابيع",
+      "discount_code_applied": false,
+      "tier_discount_percent": 5
+    },
+    "status": "جديد",
+    "created_at": "2026-07-12T10:50:54.173Z"
+  }
+]

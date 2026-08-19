@@ -1,0 +1,8 @@
+التعديلات الأخيرة:
+- ربط Facebook: https://www.facebook.com/Reversetechmed
+- ربط Instagram: https://www.instagram.com/reverse.tech2024/
+- ربط LinkedIn: https://www.linkedin.com/company/reverse-tech-med/
+- ترك Twitter كما هو بدون رابط جديد.
+- نموذج البريد في الفوتر يرسل إشعارًا إلى بريد الشركة.
+- يرسل رسالة تأكيد تلقائية إلى بريد العميل.
+- يعتمد على SMTP و CONTACT_TO_EMAIL في ملف .env.

@@ -1,0 +1,1457 @@
+<!doctype html>
+
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Reverse Tech for medical equipments</title>
+    <link href="/favicon.png" rel="icon" type="image/png" />
+    <link href="/favicon.png" rel="apple-touch-icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;family=Outfit:wght@300;400;500;600;700;800&amp;family=Tajawal:wght@300;400;500;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- شريط المهام العلوي -->
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <div class="contact-number">
+          <i class="fas fa-phone"></i
+          ><span data-ar="اتصل بنا: 01114578817" data-en="Call us: 01114578817"
+            >اتصل بنا: 01114578817</span
+          >
+        </div>
+        <div class="top-bar-actions">
+          <a class="contact-button" href="contact.html"
+            ><i class="fas fa-envelope"></i
+            ><span data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</span></a
+          ><button
+            aria-label="تغيير اللغة"
+            class="top-language-btn"
+            id="pageLanguageToggle"
+            type="button"
+          >
+            <i class="fas fa-globe"></i><span>English</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="container navbar">
+        <a class="logo" href="index.html"
+          ><img alt="Reverse Tech" src="/media/public/LogoReverseTeck-W.jpg"
+        /></a>
+        <div class="nav-content">
+          <button aria-label="فتح القائمة" class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li>
+              <a
+                class="active"
+                data-ar="الرئيسية"
+                data-en="Home"
+                href="index.html"
+                >الرئيسية</a
+              >
+            </li>
+            <li>
+              <a data-ar="من نحن" data-en="About Us" href="about.html"
+                >من نحن</a
+              >
+            </li>
+            <li>
+              <a data-ar="خدماتنا" data-en="Services" href="services.html"
+                >خدماتنا</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-cta-link"
+                data-ar="اطلب الآن"
+                data-en="Order Now"
+                href="order.html"
+                >اطلب الآن</a
+              >
+            </li>
+            <li>
+              <a data-ar="مشاريعنا" data-en="Projects" href="projects.html"
+                >مشاريعنا</a
+              >
+            </li>
+            <li>
+              <a data-ar="عملائنا" data-en="Clients" href="clients.html"
+                >عملائنا</a
+              >
+            </li>
+            <li>
+              <a data-ar="اتصل بنا" data-en="Contact Us" href="contact.html"
+                >اتصل بنا</a
+              >
+            </li>
+            <li>
+              <a class="signin-link" href="admin.html"
+                ><i class="fas fa-user"></i>
+                <span data-ar="تسجيل الدخول" data-en="Sign In"
+                  >تسجيل الدخول</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- سلايدر فيديو الخدمات -->
+    <section class="video-hero-slider" id="videoSlider">
+      <div class="video-slide active">
+        <video autoplay="" loop="" muted="" playsinline="" preload="auto">
+          <source
+            src="https://assets.mixkit.co/videos/2381/2381-720.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="video-slide-overlay"></div>
+        <div class="video-slide-caption">
+          <span class="video-slide-number">01 / 04</span>
+          <h2 data-key="servicePcbTitle">
+            تصميم وتصنيع وتجميع اللوحات الإلكترونية (PCB)
+          </h2>
+        </div>
+      </div>
+      <div class="video-slide">
+        <video autoplay="" loop="" muted="" playsinline="" preload="auto">
+          <source
+            src="https://videos.pexels.com/video-files/7030718/7030718-uhd_2560_1440_24fps.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="video-slide-overlay"></div>
+        <div class="video-slide-caption">
+          <span class="video-slide-number">02 / 04</span>
+          <h2 data-key="servicePcbMaintenanceTitle">
+            صيانة اللوحات الإلكترونية (PCB Maintenance)
+          </h2>
+        </div>
+      </div>
+      <div class="video-slide">
+        <video autoplay="" loop="" muted="" playsinline="" preload="auto">
+          <source
+            src="https://assets.mixkit.co/videos/2237/2237-720.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="video-slide-overlay"></div>
+        <div class="video-slide-caption">
+          <span class="video-slide-number">03 / 04</span>
+          <h2 data-key="serviceCncTitle">خدمات التشغيل بالـ CNC</h2>
+        </div>
+      </div>
+      <div class="video-slide">
+        <video autoplay="" loop="" muted="" playsinline="" preload="auto">
+          <source
+            src="https://videos.pexels.com/video-files/855255/855255-hd_1920_1080_25fps.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="video-slide-overlay"></div>
+        <div class="video-slide-caption">
+          <span class="video-slide-number">04 / 04</span>
+          <h2 data-key="service3dTitle">
+            المسح والتصميم والطباعة ثلاثية الأبعاد
+          </h2>
+        </div>
+      </div>
+      <div class="video-slider-dots">
+        <button aria-label="1" class="video-dot active" data-slide="0"></button>
+        <button aria-label="2" class="video-dot" data-slide="1"></button>
+        <button aria-label="3" class="video-dot" data-slide="2"></button>
+        <button aria-label="4" class="video-dot" data-slide="3"></button>
+      </div>
+    </section>
+    <!-- قسم البطل -->
+    <section class="hero" id="home">
+      <div class="container">
+        <h1 data-key="heroTitle">حلول تقنية متكاملة لمستقبل أفضل</h1>
+        <p data-key="heroDesc">
+          نقدم في Reverse Tech خدمات متكاملة في مجال الصيانة، المعايرة، التصنيع
+          والطباعة ثلاثية الأبعاد بأعلى معايير الجودة
+        </p>
+        <button
+          class="cta-button request-service-btn"
+          data-key="ctaButton"
+          type="button"
+        >
+          اطلب خدمة
+        </button>
+      </div>
+    </section>
+    <!-- قسم من نحن -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-container">
+          <div class="about-image">
+            <img alt="من نحن" src="/media/public/us.jpg" />
+          </div>
+          <div class="about-content">
+            <h2 data-key="aboutTitle">من نحن</h2>
+            <p data-key="aboutDesc">
+              شركة Reverse Tech متخصصة في تقديم خدمات الهندسة العكسية للأجهزة
+              الطبية. نعمل على تحليل وفحص مكونات وأداء الأجهزة بدقة عالية
+              باستخدام أحدث أدوات القياس والمسح ثلاثي الأبعاد. نقدم خدماتنا إلى
+              المستشفيات والمؤسسات الطبية، ونساعد المصنعين على الالتزام
+              بالمعايير الدولية، ونساهم في تحسين الأداء، ونوفر دعمًا فنيًا
+              متكاملاً عند صعوبة الحصول على قطع الغيار الأصيلة مع مراعاة حقوق
+              الملكية الفكرية.
+            </p>
+            <div class="about-features">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-industry"></i>
+                </div>
+                <div class="feature-text">
+                  <h4 data-key="feature1Title">دعم الصناعة الوطنية</h4>
+                  <p data-key="feature1Desc">نساهم في تنمية الصناعة المحلية</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="feature-text">
+                  <h4 data-key="feature2Title">تطوير الأداء</h4>
+                  <p data-key="feature2Desc">نعمل على تحسين أداء الأجهزة</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-cogs"></i>
+                </div>
+                <div class="feature-text">
+                  <h4 data-key="feature3Title">إصلاح المكونات</h4>
+                  <p data-key="feature3Desc">نقوم بإصلاح المكونات المعطلة</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-handshake"></i>
+                </div>
+                <div class="feature-text">
+                  <h4 data-key="feature4Title">شراكات مستدامة</h4>
+                  <p data-key="feature4Desc">
+                    نبني علاقات طويلة الأمد مع عملائنا
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- قسم الخدمات -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-key="servicesTitle">خدماتنا</h2>
+          <p data-key="servicesDesc">
+            نقدم مجموعة متكاملة من الخدمات التقنية لتلبية احتياجاتك
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card animate delay-1" data-service-key="pcb">
+            <img
+              alt="PCB Design, Manufacturing &amp; Assembly"
+              class="service-image"
+              src="/media/public/pcb-design-manufacturing.png"
+            />
+            <div class="service-content">
+              <h3 data-key="servicePcbTitle">
+                تصميم وتصنيع وتجميع اللوحات الإلكترونية (PCB)
+              </h3>
+              <p data-key="servicePcbDesc">
+                نقدم خدمة متكاملة تشمل تصميم اللوحات الإلكترونية PCB وتصنيعها
+                وتجميع مكوناتها Assembly بأعلى معايير الجودة والدقة، بداية من
+                الفكرة الأولى وحتى المنتج النهائي الجاهز للتشغيل.
+              </p>
+              <a class="read-more" data-key="readMore" href="pcb-manufacturing-service.html"
+                >اعرف أكثر <i class="fas fa-arrow-left"></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="service-card animate delay-2"
+            data-service-key="maintenance"
+          >
+            <img
+              alt="PCB Maintenance"
+              class="service-image"
+              src="/media/public/pcb-maintenance.png"
+            />
+            <div class="service-content">
+              <h3 data-key="servicePcbMaintenanceTitle">
+                صيانة اللوحات الإلكترونية (PCB Maintenance)
+              </h3>
+              <p data-key="servicePcbMaintenanceDesc">
+                نقدم خدمة فحص وصيانة اللوحات الإلكترونية المعطلة وتشخيص الأعطال
+                وإصلاح نقاط الضعف فيها، لإطالة عمر الجهاز وتقليل تكلفة استبدال
+                القطع الأصلية.
+              </p>
+              <a class="read-more" data-key="readMore" href="pcb-maintenance-service.html"
+                >اعرف أكثر <i class="fas fa-arrow-left"></i
+              ></a>
+            </div>
+          </div>
+          <div class="service-card animate delay-3" data-service-key="cnc">
+            <img
+              alt="CNC Machining"
+              class="service-image"
+              src="/media/public/cnc-machining.png"
+            />
+            <div class="service-content">
+              <h3 data-key="serviceCncTitle">خدمات التشغيل بالـ CNC</h3>
+              <p data-key="serviceCncDesc">
+                نقدم خدمات التصنيع الدقيق باستخدام ماكينات CNC لإنتاج القطع
+                المعدنية والبلاستيكية بمقاسات وتفاصيل دقيقة، تناسب قطع غيار
+                الأجهزة الطبية والنماذج الصناعية.
+              </p>
+              <a class="read-more" data-key="readMore" href="cnc-service.html"
+                >اعرف أكثر <i class="fas fa-arrow-left"></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="service-card animate delay-4"
+            data-service-key="printing3d"
+          >
+            <img
+              alt="3D Scanning, Designing &amp; Printing"
+              class="service-image"
+              src="/media/public/3d-scanning-printing.png"
+            />
+            <div class="service-content">
+              <h3 data-key="service3dTitle">
+                المسح والتصميم والطباعة ثلاثية الأبعاد
+              </h3>
+              <p data-key="service3dDesc">
+                نقدم خدمة متكاملة تبدأ بالمسح الضوئي ثلاثي الأبعاد للقطعة
+                الأصلية، مرورًا بإعادة تصميمها هندسيًا بدقة، وصولًا لطباعتها
+                باستخدام أحدث تقنيات الطباعة ثلاثية الأبعاد.
+              </p>
+              <a class="read-more" data-key="readMore" href="3d-printing-service.html"
+                >اعرف أكثر <i class="fas fa-arrow-left"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="order-hub" id="orderNow">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-key="orderNowTitle">اطلب الآن</h2>
+          <p data-key="orderNowDesc">اختر الخدمة المطلوبة وابدأ طلبك بسهولة</p>
+        </div>
+        <div class="order-product-grid">
+          <a class="order-product-card" href="pcb.html"
+            ><i class="fas fa-microchip"></i>
+            <h3 data-ar="تصنيع اللوحات الإلكترونية المطبوعة (PCB)" data-en="PCB Manufacturing">تصنيع اللوحات الإلكترونية المطبوعة (PCB)</h3>
+            <span data-ar="ابدأ الطلب" data-en="Start Order"
+              >ابدأ الطلب</span
+            ></a
+          >
+          <a class="order-product-card" href="3d-printing.html"
+            ><i class="fas fa-cube"></i>
+            <h3 data-ar="المسح والتصميم والطباعة ثلاثية الأبعاد" data-en="3D Scanning, Design & Printing">
+              المسح والتصميم والطباعة ثلاثية الأبعاد
+            </h3>
+            <span data-ar="ارفع ملف التصميم" data-en="Upload Your Design"
+              >ارفع ملف التصميم</span
+            ></a
+          >
+          <a class="order-product-card" href="mechanical-parts.html"
+            ><i class="fas fa-gears"></i>
+            <h3 data-ar="القطع الميكانيكية" data-en="Mechanical Parts">
+              القطع الميكانيكية
+            </h3>
+            <span data-ar="استعرض واطلب القطع" data-en="Browse and Order Parts"
+              >استعرض واطلب القطع</span
+            ></a
+          >
+          <a class="order-product-card" href="stencil.html"
+            ><i class="fas fa-border-all"></i>
+            <h3 data-ar="استنسل SMT" data-en="SMT Stencil">استنسل SMT</h3>
+            <span data-ar="اطلب الاستنسل" data-en="Order Stencil"
+              >اطلب الاستنسل</span
+            ></a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- قسم طلب تصنيع PCB -->
+    <section class="pcb-order-section" id="pcbOrder">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-key="pcbOrderTitle">
+            تصنيع اللوحات الإلكترونية المطبوعة (PCB)
+          </h2>
+          <p data-key="pcbOrderDesc">
+            احسب السعر فورًا وابعتلنا ملفات الجربر، وهنتواصل معاك لتأكيد الطلب
+          </p>
+        </div>
+        <!-- رسائل التنبيه القديمة مخفية حسب الطلب -->
+        <!-- <div class="pcb-notices">...</div> -->
+        <div class="pcb-order-grid">
+          <!-- ملخص السعر -->
+          <div class="pcb-price-summary">
+            <div class="pcb-price-row">
+              <span data-key="pcbPriceBeforeLabel">السعر قبل الخصم</span>
+              <span id="pcbPriceBefore"
+                >0 <span data-key="pcbCurrency">جنيه</span></span
+              >
+            </div>
+            <div class="pcb-price-row">
+              <span data-key="pcbDiscountLabel">قيمة الخصم</span>
+              <span class="pcb-discount-text" id="pcbDiscountValue"
+                >0 <span data-key="pcbCurrency">جنيه</span></span
+              >
+            </div>
+            <div class="pcb-price-row pcb-price-final">
+              <span data-key="pcbFinalPriceLabel">السعر النهائي</span>
+              <span id="pcbFinalPrice"
+                >0 <span data-key="pcbCurrency">جنيه</span></span
+              >
+            </div>
+            <div class="pcb-price-per-unit" id="pcbPerUnitNote">
+              (0 <span data-key="pcbCurrency">جنيه</span> /
+              <span data-key="pcbPerPiece">قطعة</span>)
+            </div>
+            <div class="pcb-price-leadtime" id="pcbQuoteLeadTime">
+              <i class="fas fa-truck"></i>
+              <span data-key="pcbTimeLabel">الوقت:</span>
+              <span id="pcbQuoteLeadTimeText">—</span>
+            </div>
+          </div>
+          <!-- فورم الطلب -->
+          <form class="pcb-order-form" id="pcbOrderForm">
+            <div class="pcb-upload-zone" id="pcbUploadZone">
+              <input
+                accept=".zip,.rar"
+                hidden=""
+                id="pcbGerberFile"
+                name="gerber_file"
+                type="file"
+              />
+              <i class="fas fa-cloud-upload-alt"></i>
+              <div>
+                <span data-key="pcbUploadText"
+                  >اسحب وأفلت ملف الجربر هنا أو</span
+                >
+                <u data-key="pcbBrowseText">تصفح</u>
+              </div>
+              <div class="pcb-upload-hint" data-key="pcbUploadHint">
+                ملفات ZIP أو RAR فقط، حتى 100 ميجا
+              </div>
+              <div class="pcb-upload-filename" id="pcbUploadFilename"></div>
+            </div>
+            <div class="pcb-form-grid">
+              <div class="pcb-field">
+                <label data-key="pcbLayersLabel">عدد الطبقات *</label>
+                <select id="pcbLayers">
+                  <option value="1">1</option>
+                  <option selected="" value="2">2</option>
+                  <option value="4">4</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+              <div class="pcb-field">
+                <label data-key="pcbQtyLabel">الكمية *</label>
+                <select id="pcbQty">
+                  <option selected="" value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                  <option value="200">200</option>
+                  <option value="500">500</option>
+                  <option value="1000">1000</option>
+                </select>
+              </div>
+              <div class="pcb-field pcb-field-wide">
+                <label data-key="pcbDimensionsLabel">الأبعاد (مم) *</label>
+                <div class="pcb-dimensions-row">
+                  <input
+                    id="pcbWidth"
+                    min="1"
+                    placeholder="العرض"
+                    step="0.1"
+                    type="number"
+                    value="50"
+                  />
+                  <span class="pcb-dimensions-x">×</span>
+                  <input
+                    id="pcbLength"
+                    min="1"
+                    placeholder="الطول"
+                    step="0.1"
+                    type="number"
+                    value="50"
+                  />
+                  <span class="pcb-dimensions-unit">mm</span>
+                </div>
+              </div>
+              <div class="pcb-field">
+                <label data-key="pcbThicknessLabel">السُمك (مم) *</label>
+                <select id="pcbThickness">
+                  <option value="0.4">0.4mm</option>
+                  <option value="0.6">0.6mm</option>
+                  <option value="0.8">0.8mm</option>
+                  <option value="1.0">1.0mm</option>
+                  <option value="1.2">1.2mm</option>
+                  <option selected="" value="1.6">1.6mm</option>
+                  <option value="2.0">2.0mm</option>
+                </select>
+              </div>
+              <div class="pcb-field pcb-field-wide">
+                <label data-key="pcbColorLabel">لون البوردة *</label>
+                <div class="pcb-color-swatches" id="pcbColorSwatches">
+                  <button
+                    class="pcb-color-swatch active"
+                    data-color="green"
+                    style="background: #2ecc71"
+                    title="Green"
+                    type="button"
+                  ></button>
+                  <button
+                    class="pcb-color-swatch"
+                    data-color="purple"
+                    style="background: #8e44ad"
+                    title="Purple"
+                    type="button"
+                  ></button>
+                  <button
+                    class="pcb-color-swatch"
+                    data-color="red"
+                    style="background: #e74c3c"
+                    title="Red"
+                    type="button"
+                  ></button>
+                  <button
+                    class="pcb-color-swatch"
+                    data-color="yellow"
+                    style="background: #f1c40f"
+                    title="Yellow"
+                    type="button"
+                  ></button>
+                  <button
+                    class="pcb-color-swatch"
+                    data-color="blue"
+                    style="background: #2980b9"
+                    title="Blue"
+                    type="button"
+                  ></button>
+                  <button
+                    class="pcb-color-swatch pcb-color-swatch-white"
+                    data-color="white"
+                    style="background: #ffffff"
+                    title="White"
+                    type="button"
+                  ></button>
+                  <button
+                    class="pcb-color-swatch"
+                    data-color="black"
+                    style="background: #1c1c1c"
+                    title="Black"
+                    type="button"
+                  ></button>
+                </div>
+              </div>
+              <div class="pcb-field" style="display: none;">
+                <label class="pcb-checkbox-label">
+                  <input id="pcbRush" type="checkbox" />
+                  <span data-key="pcbRushLabel"
+                    >تصنيع/شحن عاجل (رسوم إضافية)</span
+                  >
+                </label>
+              </div>
+              <div class="pcb-field">
+                <label data-key="pcbDiscountCodeLabel">كود الخصم</label>
+                <input
+                  data-key="pcbDiscountCodePlaceholder"
+                  id="pcbDiscountCode"
+                  placeholder="كود الخصم"
+                  type="text"
+                />
+              </div>
+            </div>
+            <section class="shipping-selector" data-shipping-section="">
+              <div class="shipping-heading">
+                <div>
+                  <h3
+                    data-ar="طريقة الاستلام والشحن"
+                    data-en="Delivery &amp; Shipping"
+                  >
+                    طريقة الاستلام والشحن
+                  </h3>
+                  <p
+                    data-ar="اختَر طريقة استلام طلبك، وستظهر لك التكلفة والبيانات المطلوبة تلقائيًا."
+                    data-en="Choose how you would like to receive your order. Required details and fees will update automatically."
+                  >
+                    اختَر طريقة استلام طلبك، وستظهر لك التكلفة والبيانات
+                    المطلوبة تلقائيًا.
+                  </p>
+                </div>
+                <i class="fas fa-truck-fast"></i>
+              </div>
+              <div class="shipping-methods">
+                <label class="shipping-method-card active">
+                  <input
+                    checked=""
+                    name="shipping_method"
+                    type="radio"
+                    value="pickup"
+                  />
+                  <span class="shipping-icon"
+                    ><i class="fas fa-building"></i
+                  ></span>
+                  <strong
+                    data-ar="استلام من مقر الشركة"
+                    data-en="Company Pickup"
+                    >استلام من مقر الشركة</strong
+                  >
+                  <small
+                    data-ar="بدون رسوم شحن — سنتواصل معك لتأكيد موعد الاستلام."
+                    data-en="No shipping fee — we will contact you to confirm the pickup time."
+                    >بدون رسوم شحن — سنتواصل معك لتأكيد موعد الاستلام.</small
+                  >
+                  <b data-ar="مجاني" data-en="Free">مجاني</b>
+                </label>
+                <label class="shipping-method-card">
+                  <input name="shipping_method" type="radio" value="egypt" />
+                  <span class="shipping-icon"
+                    ><i class="fas fa-map-location-dot"></i
+                  ></span>
+                  <strong data-ar="شحن داخل مصر" data-en="Delivery Inside Egypt"
+                    >شحن داخل مصر</strong
+                  >
+                  <small
+                    data-ar="يبدأ من 150 جنيه لأول كيلوجرام، ويُضاف 15 جنيهًا لكل كيلوجرام إضافي. قد تختلف التكلفة النهائية حسب المحافظة وطبيعة الشحنة، ويتم تأكيدها مع الشركة."
+                    data-en="Starts at EGP 150 for the first kilogram, plus EGP 15 for each additional kilogram. Final fees may vary by governorate and shipment type and will be confirmed by the company."
+                    >يبدأ من 150 جنيه لأول كيلوجرام، ويُضاف 15 جنيهًا لكل
+                    كيلوجرام إضافي. قد تختلف التكلفة النهائية حسب المحافظة
+                    وطبيعة الشحنة، ويتم تأكيدها مع الشركة.</small
+                  >
+                  <b data-ar="من 150 جنيه" data-en="From EGP 150"
+                    >من 150 جنيه</b
+                  >
+                </label>
+                <label class="shipping-method-card">
+                  <input
+                    name="shipping_method"
+                    type="radio"
+                    value="international"
+                  />
+                  <span class="shipping-icon"
+                    ><i class="fas fa-earth-americas"></i
+                  ></span>
+                  <strong
+                    data-ar="شحن خارج مصر"
+                    data-en="International Delivery"
+                    >شحن خارج مصر</strong
+                  >
+                  <small
+                    data-ar="رسوم مبدئية 5000 جنيه. تُراجع التكلفة النهائية حسب الدولة والوزن وإجراءات الشحن، ويتم تأكيد التفاصيل مع الشركة قبل التنفيذ."
+                    data-en="Initial fee: EGP 5,000. The final cost depends on destination, weight, and shipping requirements and will be confirmed before processing."
+                    >رسوم مبدئية 5000 جنيه. تُراجع التكلفة النهائية حسب الدولة
+                    والوزن وإجراءات الشحن، ويتم تأكيد التفاصيل مع الشركة قبل
+                    التنفيذ.</small
+                  >
+                  <b data-ar="من 5000 جنيه" data-en="From EGP 5,000"
+                    >من 5000 جنيه</b
+                  >
+                </label>
+              </div>
+              <div class="shipping-details" data-shipping-details="" hidden="">
+                <div class="shipping-fields-grid">
+                  <div
+                    class="shipping-country-field"
+                    data-country-field=""
+                    hidden=""
+                  >
+                    <label data-ar="الدولة" data-en="Country">الدولة</label>
+                    <select name="shipping_country">
+                      <option
+                        data-ar="اختر الدولة"
+                        data-en="Select country"
+                        value=""
+                      >
+                        اختر الدولة
+                      </option>
+                      <option value="Afghanistan">Afghanistan</option>
+                      <option value="Albania">Albania</option>
+                      <option value="Algeria">Algeria</option>
+                      <option value="American Samoa">American Samoa</option>
+                      <option value="Andorra">Andorra</option>
+                      <option value="Angola">Angola</option>
+                      <option value="Anguilla">Anguilla</option>
+                      <option value="Antarctica">Antarctica</option>
+                      <option value="Antigua and Barbuda">
+                        Antigua and Barbuda
+                      </option>
+                      <option value="Argentina">Argentina</option>
+                      <option value="Armenia">Armenia</option>
+                      <option value="Aruba">Aruba</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Austria">Austria</option>
+                      <option value="Azerbaijan">Azerbaijan</option>
+                      <option value="Bahamas">Bahamas</option>
+                      <option value="Bahrain">Bahrain</option>
+                      <option value="Bangladesh">Bangladesh</option>
+                      <option value="Barbados">Barbados</option>
+                      <option value="Belarus">Belarus</option>
+                      <option value="Belgium">Belgium</option>
+                      <option value="Belize">Belize</option>
+                      <option value="Benin">Benin</option>
+                      <option value="Bermuda">Bermuda</option>
+                      <option value="Bhutan">Bhutan</option>
+                      <option value="Bolivia, Plurinational State of">
+                        Bolivia, Plurinational State of
+                      </option>
+                      <option value="Bonaire, Sint Eustatius and Saba">
+                        Bonaire, Sint Eustatius and Saba
+                      </option>
+                      <option value="Bosnia and Herzegovina">
+                        Bosnia and Herzegovina
+                      </option>
+                      <option value="Botswana">Botswana</option>
+                      <option value="Bouvet Island">Bouvet Island</option>
+                      <option value="Brazil">Brazil</option>
+                      <option value="British Indian Ocean Territory">
+                        British Indian Ocean Territory
+                      </option>
+                      <option value="Brunei Darussalam">
+                        Brunei Darussalam
+                      </option>
+                      <option value="Bulgaria">Bulgaria</option>
+                      <option value="Burkina Faso">Burkina Faso</option>
+                      <option value="Burundi">Burundi</option>
+                      <option value="Cabo Verde">Cabo Verde</option>
+                      <option value="Cambodia">Cambodia</option>
+                      <option value="Cameroon">Cameroon</option>
+                      <option value="Canada">Canada</option>
+                      <option value="Cayman Islands">Cayman Islands</option>
+                      <option value="Central African Republic">
+                        Central African Republic
+                      </option>
+                      <option value="Chad">Chad</option>
+                      <option value="Chile">Chile</option>
+                      <option value="China">China</option>
+                      <option value="Christmas Island">Christmas Island</option>
+                      <option value="Cocos (Keeling) Islands">
+                        Cocos (Keeling) Islands
+                      </option>
+                      <option value="Colombia">Colombia</option>
+                      <option value="Comoros">Comoros</option>
+                      <option value="Congo">Congo</option>
+                      <option value="Congo, The Democratic Republic of the">
+                        Congo, The Democratic Republic of the
+                      </option>
+                      <option value="Cook Islands">Cook Islands</option>
+                      <option value="Costa Rica">Costa Rica</option>
+                      <option value="Croatia">Croatia</option>
+                      <option value="Cuba">Cuba</option>
+                      <option value="Curaçao">Curaçao</option>
+                      <option value="Cyprus">Cyprus</option>
+                      <option value="Czechia">Czechia</option>
+                      <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                      <option value="Denmark">Denmark</option>
+                      <option value="Djibouti">Djibouti</option>
+                      <option value="Dominica">Dominica</option>
+                      <option value="Dominican Republic">
+                        Dominican Republic
+                      </option>
+                      <option value="Ecuador">Ecuador</option>
+                      <option value="Egypt">Egypt</option>
+                      <option value="El Salvador">El Salvador</option>
+                      <option value="Equatorial Guinea">
+                        Equatorial Guinea
+                      </option>
+                      <option value="Eritrea">Eritrea</option>
+                      <option value="Estonia">Estonia</option>
+                      <option value="Eswatini">Eswatini</option>
+                      <option value="Ethiopia">Ethiopia</option>
+                      <option value="Falkland Islands (Malvinas)">
+                        Falkland Islands (Malvinas)
+                      </option>
+                      <option value="Faroe Islands">Faroe Islands</option>
+                      <option value="Fiji">Fiji</option>
+                      <option value="Finland">Finland</option>
+                      <option value="France">France</option>
+                      <option value="French Guiana">French Guiana</option>
+                      <option value="French Polynesia">French Polynesia</option>
+                      <option value="French Southern Territories">
+                        French Southern Territories
+                      </option>
+                      <option value="Gabon">Gabon</option>
+                      <option value="Gambia">Gambia</option>
+                      <option value="Georgia">Georgia</option>
+                      <option value="Germany">Germany</option>
+                      <option value="Ghana">Ghana</option>
+                      <option value="Gibraltar">Gibraltar</option>
+                      <option value="Greece">Greece</option>
+                      <option value="Greenland">Greenland</option>
+                      <option value="Grenada">Grenada</option>
+                      <option value="Guadeloupe">Guadeloupe</option>
+                      <option value="Guam">Guam</option>
+                      <option value="Guatemala">Guatemala</option>
+                      <option value="Guernsey">Guernsey</option>
+                      <option value="Guinea">Guinea</option>
+                      <option value="Guinea-Bissau">Guinea-Bissau</option>
+                      <option value="Guyana">Guyana</option>
+                      <option value="Haiti">Haiti</option>
+                      <option value="Heard Island and McDonald Islands">
+                        Heard Island and McDonald Islands
+                      </option>
+                      <option value="Holy See (Vatican City State)">
+                        Holy See (Vatican City State)
+                      </option>
+                      <option value="Honduras">Honduras</option>
+                      <option value="Hong Kong">Hong Kong</option>
+                      <option value="Hungary">Hungary</option>
+                      <option value="Iceland">Iceland</option>
+                      <option value="India">India</option>
+                      <option value="Indonesia">Indonesia</option>
+                      <option value="Iran, Islamic Republic of">
+                        Iran, Islamic Republic of
+                      </option>
+                      <option value="Iraq">Iraq</option>
+                      <option value="Ireland">Ireland</option>
+                      <option value="Isle of Man">Isle of Man</option>
+                      <option value="Israel">Israel</option>
+                      <option value="Italy">Italy</option>
+                      <option value="Jamaica">Jamaica</option>
+                      <option value="Japan">Japan</option>
+                      <option value="Jersey">Jersey</option>
+                      <option value="Jordan">Jordan</option>
+                      <option value="Kazakhstan">Kazakhstan</option>
+                      <option value="Kenya">Kenya</option>
+                      <option value="Kiribati">Kiribati</option>
+                      <option value="Korea, Democratic People's Republic of">
+                        Korea, Democratic People's Republic of
+                      </option>
+                      <option value="Korea, Republic of">
+                        Korea, Republic of
+                      </option>
+                      <option value="Kuwait">Kuwait</option>
+                      <option value="Kyrgyzstan">Kyrgyzstan</option>
+                      <option value="Lao People's Democratic Republic">
+                        Lao People's Democratic Republic
+                      </option>
+                      <option value="Latvia">Latvia</option>
+                      <option value="Lebanon">Lebanon</option>
+                      <option value="Lesotho">Lesotho</option>
+                      <option value="Liberia">Liberia</option>
+                      <option value="Libya">Libya</option>
+                      <option value="Liechtenstein">Liechtenstein</option>
+                      <option value="Lithuania">Lithuania</option>
+                      <option value="Luxembourg">Luxembourg</option>
+                      <option value="Macao">Macao</option>
+                      <option value="Madagascar">Madagascar</option>
+                      <option value="Malawi">Malawi</option>
+                      <option value="Malaysia">Malaysia</option>
+                      <option value="Maldives">Maldives</option>
+                      <option value="Mali">Mali</option>
+                      <option value="Malta">Malta</option>
+                      <option value="Marshall Islands">Marshall Islands</option>
+                      <option value="Martinique">Martinique</option>
+                      <option value="Mauritania">Mauritania</option>
+                      <option value="Mauritius">Mauritius</option>
+                      <option value="Mayotte">Mayotte</option>
+                      <option value="Mexico">Mexico</option>
+                      <option value="Micronesia, Federated States of">
+                        Micronesia, Federated States of
+                      </option>
+                      <option value="Moldova, Republic of">
+                        Moldova, Republic of
+                      </option>
+                      <option value="Monaco">Monaco</option>
+                      <option value="Mongolia">Mongolia</option>
+                      <option value="Montenegro">Montenegro</option>
+                      <option value="Montserrat">Montserrat</option>
+                      <option value="Morocco">Morocco</option>
+                      <option value="Mozambique">Mozambique</option>
+                      <option value="Myanmar">Myanmar</option>
+                      <option value="Namibia">Namibia</option>
+                      <option value="Nauru">Nauru</option>
+                      <option value="Nepal">Nepal</option>
+                      <option value="Netherlands">Netherlands</option>
+                      <option value="New Caledonia">New Caledonia</option>
+                      <option value="New Zealand">New Zealand</option>
+                      <option value="Nicaragua">Nicaragua</option>
+                      <option value="Niger">Niger</option>
+                      <option value="Nigeria">Nigeria</option>
+                      <option value="Niue">Niue</option>
+                      <option value="Norfolk Island">Norfolk Island</option>
+                      <option value="North Macedonia">North Macedonia</option>
+                      <option value="Northern Mariana Islands">
+                        Northern Mariana Islands
+                      </option>
+                      <option value="Norway">Norway</option>
+                      <option value="Oman">Oman</option>
+                      <option value="Pakistan">Pakistan</option>
+                      <option value="Palau">Palau</option>
+                      <option value="Palestine, State of">
+                        Palestine, State of
+                      </option>
+                      <option value="Panama">Panama</option>
+                      <option value="Papua New Guinea">Papua New Guinea</option>
+                      <option value="Paraguay">Paraguay</option>
+                      <option value="Peru">Peru</option>
+                      <option value="Philippines">Philippines</option>
+                      <option value="Pitcairn">Pitcairn</option>
+                      <option value="Poland">Poland</option>
+                      <option value="Portugal">Portugal</option>
+                      <option value="Puerto Rico">Puerto Rico</option>
+                      <option value="Qatar">Qatar</option>
+                      <option value="Romania">Romania</option>
+                      <option value="Russian Federation">
+                        Russian Federation
+                      </option>
+                      <option value="Rwanda">Rwanda</option>
+                      <option value="Réunion">Réunion</option>
+                      <option value="Saint Barthélemy">Saint Barthélemy</option>
+                      <option
+                        value="Saint Helena, Ascension and Tristan da Cunha"
+                      >
+                        Saint Helena, Ascension and Tristan da Cunha
+                      </option>
+                      <option value="Saint Kitts and Nevis">
+                        Saint Kitts and Nevis
+                      </option>
+                      <option value="Saint Lucia">Saint Lucia</option>
+                      <option value="Saint Martin (French part)">
+                        Saint Martin (French part)
+                      </option>
+                      <option value="Saint Pierre and Miquelon">
+                        Saint Pierre and Miquelon
+                      </option>
+                      <option value="Saint Vincent and the Grenadines">
+                        Saint Vincent and the Grenadines
+                      </option>
+                      <option value="Samoa">Samoa</option>
+                      <option value="San Marino">San Marino</option>
+                      <option value="Sao Tome and Principe">
+                        Sao Tome and Principe
+                      </option>
+                      <option value="Saudi Arabia">Saudi Arabia</option>
+                      <option value="Senegal">Senegal</option>
+                      <option value="Serbia">Serbia</option>
+                      <option value="Seychelles">Seychelles</option>
+                      <option value="Sierra Leone">Sierra Leone</option>
+                      <option value="Singapore">Singapore</option>
+                      <option value="Sint Maarten (Dutch part)">
+                        Sint Maarten (Dutch part)
+                      </option>
+                      <option value="Slovakia">Slovakia</option>
+                      <option value="Slovenia">Slovenia</option>
+                      <option value="Solomon Islands">Solomon Islands</option>
+                      <option value="Somalia">Somalia</option>
+                      <option value="South Africa">South Africa</option>
+                      <option
+                        value="South Georgia and the South Sandwich Islands"
+                      >
+                        South Georgia and the South Sandwich Islands
+                      </option>
+                      <option value="South Sudan">South Sudan</option>
+                      <option value="Spain">Spain</option>
+                      <option value="Sri Lanka">Sri Lanka</option>
+                      <option value="Sudan">Sudan</option>
+                      <option value="Suriname">Suriname</option>
+                      <option value="Svalbard and Jan Mayen">
+                        Svalbard and Jan Mayen
+                      </option>
+                      <option value="Sweden">Sweden</option>
+                      <option value="Switzerland">Switzerland</option>
+                      <option value="Syrian Arab Republic">
+                        Syrian Arab Republic
+                      </option>
+                      <option value="Taiwan, Province of China">
+                        Taiwan, Province of China
+                      </option>
+                      <option value="Tajikistan">Tajikistan</option>
+                      <option value="Tanzania, United Republic of">
+                        Tanzania, United Republic of
+                      </option>
+                      <option value="Thailand">Thailand</option>
+                      <option value="Timor-Leste">Timor-Leste</option>
+                      <option value="Togo">Togo</option>
+                      <option value="Tokelau">Tokelau</option>
+                      <option value="Tonga">Tonga</option>
+                      <option value="Trinidad and Tobago">
+                        Trinidad and Tobago
+                      </option>
+                      <option value="Tunisia">Tunisia</option>
+                      <option value="Turkmenistan">Turkmenistan</option>
+                      <option value="Turks and Caicos Islands">
+                        Turks and Caicos Islands
+                      </option>
+                      <option value="Tuvalu">Tuvalu</option>
+                      <option value="Türkiye">Türkiye</option>
+                      <option value="Uganda">Uganda</option>
+                      <option value="Ukraine">Ukraine</option>
+                      <option value="United Arab Emirates">
+                        United Arab Emirates
+                      </option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="United States">United States</option>
+                      <option value="United States Minor Outlying Islands">
+                        United States Minor Outlying Islands
+                      </option>
+                      <option value="Uruguay">Uruguay</option>
+                      <option value="Uzbekistan">Uzbekistan</option>
+                      <option value="Vanuatu">Vanuatu</option>
+                      <option value="Venezuela, Bolivarian Republic of">
+                        Venezuela, Bolivarian Republic of
+                      </option>
+                      <option value="Viet Nam">Viet Nam</option>
+                      <option value="Virgin Islands, British">
+                        Virgin Islands, British
+                      </option>
+                      <option value="Virgin Islands, U.S.">
+                        Virgin Islands, U.S.
+                      </option>
+                      <option value="Wallis and Futuna">
+                        Wallis and Futuna
+                      </option>
+                      <option value="Western Sahara">Western Sahara</option>
+                      <option value="Yemen">Yemen</option>
+                      <option value="Zambia">Zambia</option>
+                      <option value="Zimbabwe">Zimbabwe</option>
+                      <option value="Åland Islands">Åland Islands</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      data-ar="العنوان بالتفصيل"
+                      data-en="Full Delivery Address"
+                      >العنوان بالتفصيل</label
+                    >
+                    <textarea
+                      data-ar-placeholder="المحافظة، المدينة، الشارع، رقم المبنى، وأقرب علامة مميزة"
+                      data-en-placeholder="Country/governorate, city, street, building number, and nearest landmark"
+                      name="shipping_address"
+                      placeholder="المحافظة، المدينة، الشارع، رقم المبنى، وأقرب علامة مميزة"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                  <div>
+                    <label
+                      data-ar="الوزن التقريبي (كجم)"
+                      data-en="Estimated Weight (kg)"
+                      >الوزن التقريبي (كجم)</label
+                    >
+                    <input
+                      min="0.1"
+                      name="shipping_weight_kg"
+                      step="0.1"
+                      type="number"
+                      value="1"
+                    />
+                    <small
+                      data-ar="الوزن تقديري، وسيتم تأكيد الوزن النهائي بعد مراجعة الطلب."
+                      data-en="This is an estimate; final weight will be confirmed after review."
+                      >الوزن تقديري، وسيتم تأكيد الوزن النهائي بعد مراجعة
+                      الطلب.</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="shipping-summary">
+                <span
+                  ><i class="fas fa-receipt"></i>
+                  <span
+                    data-ar="رسوم الشحن التقديرية"
+                    data-en="Estimated shipping fee"
+                    >رسوم الشحن التقديرية</span
+                  ></span
+                >
+                <strong data-ar="مجاني" data-en="Free" data-shipping-fee=""
+                  >مجاني</strong
+                >
+              </div>
+            </section>
+            <button
+              class="pcb-calc-btn"
+              data-key="pcbCalcButton"
+              id="pcbCalcBtn"
+              type="button"
+            >
+              <i class="fas fa-calculator"></i> حساب السعر
+            </button>
+            <div class="pcb-contact-fields" id="pcbContactFields">
+              <div class="pcb-field">
+                <label data-key="pcbNameLabel">الاسم *</label>
+                <input id="pcbCustomerName" type="text" />
+              </div>
+              <div class="pcb-field">
+                <label data-key="pcbPhoneLabel">رقم الهاتف *</label>
+                <input id="pcbCustomerPhone" type="tel" />
+              </div>
+              <div class="pcb-field pcb-field-wide">
+                <label data-key="pcbEmailLabel"
+                  >البريد الإلكتروني (اختياري)</label
+                >
+                <input id="pcbCustomerEmail" type="email" />
+              </div>
+              <button
+                class="pcb-submit-btn"
+                data-key="pcbSubmitButton"
+                id="pcbSubmitBtn"
+                type="submit"
+              >
+                <i class="fas fa-paper-plane"></i> إرسال الطلب
+              </button>
+            </div>
+            <div class="pcb-form-message" id="pcbFormMessage"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- قسم الهندسة العكسية -->
+    <section class="reverse-engineering" id="reverse">
+      <div class="container">
+        <div class="reverse-container">
+          <div class="reverse-content">
+            <h2 data-key="reverseTitle">الهندسة العكسية للأجهزة الطبية</h2>
+            <p data-key="reverseDesc">
+              نحن نقدم خدمات الهندسة العكسية للأجهزة الطبية لفهم وتصميم وتطوير
+              الأجهزة بدقة عالية، من خلال فريق متخصص يمتلك خبرة قوية في تحليل
+              الأنظمة الطبية المعقدة. نعمل على تحليل وفحص مكونات وأداء الأجهزة
+              بدقة عالية باستخدام أحدث أدوات القياس والمسح ثلاثي الأبعاد.
+            </p>
+            <button class="cta-button" data-key="readMore2">اقرأ المزيد</button>
+          </div>
+          <div class="reverse-image">
+            <img alt="الهندسة العكسية" src="/media/public/solid.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- قسم المشاريع -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-key="projectsTitle">مشاريعنا</h2>
+          <p data-key="projectsDesc">
+            نماذج من أعمالنا ومشاريعنا المنجزة في مجال الهندسة العكسية والتصنيع
+            والطباعة ثلاثية الأبعاد
+          </p>
+        </div>
+        <div class="projects-grid" id="projectsGrid">
+          <!-- المشاريع بتتعبى هنا تلقائيًا من الباك اند (/api/projects) / لوحة التحكم admin.html -->
+        </div>
+      </div>
+    </section>
+    <!-- قسم العملاء -->
+    <section class="clients-section" id="clients">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-key="clientsTitle">عملائنا</h2>
+          <p data-key="clientsDesc">
+            نفخر بشراكتنا مع أبرز المؤسسات الطبية والصناعية
+          </p>
+        </div>
+        <div class="clients-grid">
+          <div class="client-logo">
+            <img alt="Client 1" src="/media/public/clientTrust.png" />
+          </div>
+          <div class="client-logo">
+            <img alt="Client 2" src="/media/public/clint-1-Target.png" />
+          </div>
+          <div class="client-logo">
+            <img alt="Client 3" src="/media/public/clint3-lazerHub.png" />
+          </div>
+          <div class="client-logo">
+            <img alt="Client 4" src="/media/public/client TataLaser.png" />
+          </div>
+          <div class="client-logo">
+            <img alt="Client 5" src="/media/public/clint-3-ontime.png" />
+          </div>
+          <div class="client-logo">
+            <img alt="Client 6" src="/media/public/clint3-lazerHub.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- قسم المعلومات -->
+    <section class="info-section">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-item">
+            <i class="fas fa-tools"></i>
+            <h3 data-key="info1Title">أدوات متطورة</h3>
+            <p data-key="info1Desc">
+              نستخدم أحدث الأدوات والتقنيات لضمان جودة الخدمة
+            </p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-users"></i>
+            <h3 data-key="info2Title">فريق خبير</h3>
+            <p data-key="info2Desc">
+              فريق من المهندسين والفنيين ذوي الخبرة الواسعة
+            </p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-award"></i>
+            <h3 data-key="info3Title">جودة مضمونة</h3>
+            <p data-key="info3Desc">
+              نلتزم بأعلى معايير الجودة في جميع خدماتنا
+            </p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-headset"></i>
+            <h3 data-key="info4Title">دعم فني</h3>
+            <p data-key="info4Desc">
+              خدمة عملاء على أعلى مستوى متاحة على مدار الساعة
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- قسم الاتصال -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-key="contactTitle">اتصل بنا</h2>
+          <p data-key="contactDesc">
+            يسعدنا تواصلكم معنا لأي استفسار أو طلب خدمة
+          </p>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3 data-key="addressTitle">عنواننا</h3>
+                <p data-key="address">
+                  قطعة 9368 شارع هدى شعراوى – المقطم – القاهرة – مصر
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3 data-key="phoneTitle">هاتفنا</h3>
+                <p>01114578817</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3 data-key="emailTitle">البريد الإلكتروني</h3>
+                <p>info@reversetech-med.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3 data-key="hoursTitle">ساعات العمل</h3>
+                <p data-key="hours">السبت - الخميس: 9 ص - 5 م</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3 data-key="sendMessage">أرسل رسالة</h3>
+            <form>
+              <div class="form-group">
+                <label data-key="nameLabel" for="name">الاسم</label>
+                <input id="name" required="" type="text" />
+              </div>
+              <div class="form-group">
+                <label data-key="emailLabel" for="email"
+                  >البريد الإلكتروني</label
+                >
+                <input id="email" required="" type="email" />
+              </div>
+              <div class="form-group">
+                <label data-key="messageLabel" for="message">الرسالة</label>
+                <textarea id="message" required=""></textarea>
+              </div>
+              <button class="submit-btn" data-key="sendButton" type="submit">
+                إرسال
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- التذييل -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <img alt="Reverse Tech Logo" src="/media/public/LogoReverseTeck-W2.png" />
+            </div>
+            <p
+              data-ar="تُعد شركة ريفرس تك مصدرًا شاملًا لاحتياجات شركات الأجهزة الطبية والمستشفيات، وتتخصص في تصميم وتصنيع وصيانة المكونات الإلكترونية والبلاستيكية والمعدنية."
+              data-en="Reverse Tech provides integrated solutions for medical-equipment companies and hospitals, specializing in the design, manufacturing, and maintenance of electronic, plastic, and metal components."
+            >
+              تُعد شركة ريفرس تك مصدرًا شاملًا لاحتياجات شركات الأجهزة الطبية
+              والمستشفيات، وتتخصص في تصميم وتصنيع وصيانة المكونات الإلكترونية
+              والبلاستيكية والمعدنية.
+            </p>
+            <div class="social-icons">
+              <a
+                aria-label="Facebook"
+                href="https://www.facebook.com/Reversetechmed"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook-f"></i></a
+              ><a aria-label="Twitter" href="#"
+                ><i class="fab fa-twitter"></i></a
+              ><a
+                aria-label="Instagram"
+                href="https://www.instagram.com/reverse.tech2024/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i></a
+              ><a
+                aria-label="LinkedIn"
+                href="https://www.linkedin.com/company/reverse-tech-med/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+            <ul>
+              <li>
+                <a data-ar="الرئيسية" data-en="Home" href="index.html"
+                  >الرئيسية</a
+                >
+              </li>
+              <li>
+                <a data-ar="من نحن" data-en="About Us" href="about.html"
+                  >من نحن</a
+                >
+              </li>
+              <li>
+                <a data-ar="خدماتنا" data-en="Services" href="services.html"
+                  >خدماتنا</a
+                >
+              </li>
+              <li>
+                <a data-ar="اطلب الآن" data-en="Order Now" href="order.html"
+                  >اطلب الآن</a
+                >
+              </li>
+              <li>
+                <a data-ar="عملائنا" data-en="Clients" href="clients.html"
+                  >عملائنا</a
+                >
+              </li>
+              <li>
+                <a data-ar="مشاريعنا" data-en="Projects" href="projects.html"
+                  >مشاريعنا</a
+                >
+              </li>
+              <li>
+                <a data-ar="اتصل بنا" data-en="Contact Us" href="contact.html"
+                  >اتصل بنا</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h4>
+            <ul>
+              <li>
+                <a
+                  data-ar="تصميم وتصنيع وتجميع اللوحات الإلكترونية (PCB)"
+                  data-en="PCB Design, Manufacturing &amp; Assembly"
+                  href="pcb-manufacturing-service.html"
+                  >تصميم وتصنيع وتجميع اللوحات الإلكترونية (PCB)</a
+                >
+              </li>
+              <li>
+                <a
+                  data-ar="صيانة اللوحات الإلكترونية"
+                  data-en="PCB Maintenance"
+                  href="pcb-maintenance-service.html"
+                  >صيانة اللوحات الإلكترونية</a
+                >
+              </li>
+              <li>
+                <a
+                  data-ar="خدمات التشغيل بالـ CNC"
+                  data-en="CNC Machining"
+                  href="cnc-service.html"
+                  >خدمات التشغيل بالـ CNC</a
+                >
+              </li>
+              <li>
+                <a
+                  data-ar="المسح والتصميم والطباعة ثلاثية الأبعاد"
+                  data-en="3D Scanning, Design &amp; Printing"
+                  href="3d-printing-service.html"
+                  >المسح والتصميم والطباعة ثلاثية الأبعاد</a
+                >
+              </li>
+              <li>
+                <a
+                  data-ar="الهندسة العكسية للأجهزة الطبية"
+                  data-en="Medical Device Reverse Engineering"
+                  href="reverse-engineering-service.html"
+                  >الهندسة العكسية للأجهزة الطبية</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-subscribe">
+            <h4 data-ar="اشترك في النشرة البريدية" data-en="Newsletter">
+              اشترك في النشرة البريدية
+            </h4>
+            <p
+              data-ar="اشترك لتصلك آخر أخبارنا وعروضنا"
+              data-en="Subscribe for our latest news and offers"
+            >
+              اشترك لتصلك آخر أخبارنا وعروضنا
+            </p>
+            <form class="subscribe-form">
+              <input
+                data-ar="بريدك الإلكتروني"
+                data-en="Your email"
+                placeholder="بريدك الإلكتروني"
+                required="True"
+                type="email"
+              /><button type="submit">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="copyright">
+          <p
+            data-ar="© 2026 Reverse Tech. جميع الحقوق محفوظة"
+            data-en="© 2026 Reverse Tech. All rights reserved"
+          >
+            © 2026 Reverse Tech. جميع الحقوق محفوظة
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="shipping.js"></script>
+    <script src="service-slider.js?v=6"></script>
+    <script src="newsletter.js?v=1"></script>
+  </body>
+</html>
