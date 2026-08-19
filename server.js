@@ -189,15 +189,16 @@ function calculatePcbPrice(input, cfg) {
   );
   const finalBeforeMin =
     afterRush * (codeApplied ? 1 - cfg.discountCode.discountPercent / 100 : 1);
-  const priceBeforeDiscount = Math.round(grossSubtotal + rushFee);
   const shippingFee = calculateShippingFee(input);
   const productPrice = Math.round(
     Math.max(finalBeforeMin, cfg.minimumOrderEGP),
   );
   const finalPrice = productPrice + shippingFee;
+  const priceBeforeDiscount = Math.round(grossSubtotal + rushFee + shippingFee);
+  const discountValue = Math.max(0, priceBeforeDiscount - finalPrice);
   return {
     price_before_discount: priceBeforeDiscount,
-    discount_value: Math.max(0, priceBeforeDiscount - productPrice),
+    discount_value: discountValue,
     shipping_fee: shippingFee,
     product_price: productPrice,
     final_price: finalPrice,
