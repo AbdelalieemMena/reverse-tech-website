@@ -1915,4 +1915,8 @@ app.get('/', (req, res) =>
 app.use((err, req, res, next) =>
   res.status(400).json({ error: err.message || 'حصل خطأ أثناء رفع الملف' }),
 );
-app.listen(PORT, () => console.log(`Reverse Tech server running on ${PORT}`));
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => console.log(`Reverse Tech server running on ${PORT}`));
+}
+
+module.exports = app;
