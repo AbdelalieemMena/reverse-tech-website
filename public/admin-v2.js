@@ -447,7 +447,10 @@ function renderOrderCard(o,type){
      <span>ملف Gerber المرفق</span>
      <strong>
        <button type="button" class="admin-gerber-dl-btn" onclick="downloadGerberFile('${escapeHtml(String(o.id))}', '${escapeHtml(o.gerber_original_name || 'gerber.zip')}')">
-         <i class="fas fa-file-arrow-down"></i> تنزيل ملف Gerber (${escapeHtml(o.gerber_original_name || 'الملف')})
+         <i class="fas fa-file-arrow-down"></i> تنزيل ملف Gerber
+       </button>
+       <button type="button" class="admin-gerber-view-btn" onclick="openGerberViewerModal('${escapeHtml(String(o.id))}', '${escapeHtml(o.gerber_original_name || 'gerber.zip')}')">
+         <i class="fas fa-eye"></i> معاينة طبقات Gerber 👁️
        </button>
      </strong>
    </div>` : '';

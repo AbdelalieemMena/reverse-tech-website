@@ -904,3 +904,182 @@ html[lang="en"] body.admin-body h1, html[lang="en"] body.admin-body h2, html[lan
     }
 }
 
+/* ================= Gerber Viewer Modal Styles ================= */
+.admin-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.admin-modal.visible {
+    display: flex;
+}
+
+.admin-modal-content.gerber-modal-content {
+    background: #ffffff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    overflow: hidden;
+    animation: modalSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlideIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.admin-modal-header {
+    padding: 18px 24px;
+    background: #092640;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-modal-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-modal-close {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.admin-modal-close:hover {
+    color: #fff;
+}
+
+.admin-modal-body {
+    padding: 24px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.gerber-loading {
+    text-align: center;
+    padding: 40px;
+    color: #087ed1;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.gerber-layers-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .gerber-layers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gerber-layer-list {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.gerber-layer-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gerber-layer-item:hover, .gerber-layer-item.active {
+    border-color: #087ed1;
+    background: #f0f7fc;
+    color: #087ed1;
+}
+
+.gerber-layer-badge {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: #e2e8f0;
+    color: #475569;
+    font-weight: 700;
+}
+
+.gerber-preview-container {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+    color: #94a3b8;
+    position: relative;
+}
+
+.gerber-preview-canvas {
+    max-width: 100%;
+    max-height: 340px;
+    border-radius: 6px;
+    background: #020617;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.admin-gerber-view-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #05b9aa;
+    color: #fff;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.admin-gerber-view-btn:hover {
+    background: #04978a;
+}
+
